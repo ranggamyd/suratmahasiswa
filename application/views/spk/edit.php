@@ -1,0 +1,176 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0"><?= $title ?></h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item active"><a href="<?= base_url('spk') ?>">SPK</a></li>
+            <li class="breadcrumb-item active"><?= $title ?></li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="<?= base_url('spk') ?>" class="btn btn-primary btn-block mb-3"><i class="fas fa-arrow-left mr-2"></i>Kembali ke daftar SPK</a>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Jenis Surat</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item active">
+                  <a href="<?= base_url('skl') ?>" class="nav-link">
+                    <i class="fas fa-envelope-open-text mr-2"></i> Surat Keterangan Lulus
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?= base_url('sps') ?>" class="nav-link">
+                    <i class="fas fa-envelope-open-text mr-2"></i> Surat Penelitian Skripsi
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?= base_url('sokp') ?>" class="nav-link">
+                    <i class="fas fa-envelope-open-text mr-2"></i> Surat Observasi Kunjungan Perusahaan
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?= base_url('sak') ?>" class="nav-link">
+                    <i class="fas fa-envelope-open-text mr-2"></i> Surat Aktif Kuliah
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?= base_url('spkl') ?>" class="nav-link">
+                    <i class="fas fa-envelope-open-text mr-2"></i> Surat Praktek Kerja Lapangan
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?= base_url('sc') ?>" class="nav-link">
+                    <i class="fas fa-envelope-open-text mr-2"></i> Surat Cuti
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?= base_url('spk') ?>" class="nav-link">
+                    <i class="fas fa-envelope-open-text mr-2"></i> Surat Pindah Kelas
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?= base_url('spp') ?>" class="nav-link">
+                    <i class="fas fa-envelope-open-text mr-2"></i> Surat Pindah Prodi
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer"></div>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-md-9">
+          <div class="card">
+            <div class="card-header">
+              <!-- <a href="<?= base_url('spk/edit') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Edit SPK</a> -->
+              <h3 class="card-title">Edit Surat Cuti</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form action="<?= base_url('spk/proses_edit') ?>" method="post">
+            <input type="hidden" name="id" value="<?= $spk->id_spk ?>">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="no_surat">No. Surat</label>
+                  <input type="text" name="no_surat" value="<?= $spk->no_surat ?>" class="form-control" id="no_surat" placeholder="No. Surat :" readonly required>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="nim_mhs">Mahasiswa</label>
+                    <select name="nim_mhs" class="form-control" id="nim_mhs" required>
+                      <option selected disabled>== Pilih Mahasiswa ==</option>
+                      <?php foreach ($mhs as $item) : ?>
+                        <option value="<?= $item['nim'] ?>" data-nama_mhs="<?= $item['nama_mhs'] ?>" data-semester="<?= $item['semester'] ?>" data-nama_prodi="<?= $item['nama_prodi'] ?>" data-gelar="<?= $item['gelar_kelulusan'] ?>" <?= ($item['nim'] == $spk->nim_mhs) ? 'selected' : '' ?>>
+                          <?= $item['nama_prodi'] ?> - <?= $item['nim'] ?> - <?= $item['nama_mhs'] ?>
+                        </option>
+                      <?php endforeach ?>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="nidn_kaprodi">Kaprodi</label>
+                    <select name="nidn_kaprodi" class="form-control" id="nidn_kaprodi" readonly required>
+                      <option selected disabled>== Pilih Kaprodi ==</option>
+                      <?php foreach ($kaprodi as $item) : ?>
+                        <option value="<?= $item['nidn'] ?>" data-nama_kaprodi="<?= $item['nama_kaprodi'] ?>" data-nama_prodi="<?= $item['nama_prodi'] ?>" <?= ($item['nidn'] == $spk->nidn_kaprodi) ? 'selected' : '' ?>><?= $item['nama_kaprodi'] ?></option>
+                      <?php endforeach ?>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4">
+                    <label for="tujuan">Tujuan</label>
+                    <input type="text" name="tujuan" value="<?= $spk->tujuan ?>" class="form-control" id="tujuan" placeholder="Tujuan :" required>
+                  </div>
+                  <div class="form-group col-md-5">
+                    <label for="instansi">Instansi</label>
+                    <input type="text" name="instansi" value="<?= $spk->instansi ?>" class="form-control" id="instansi" placeholder="Instansi :" required>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="tgl_surat">Tanggal Surat</label>
+                    <input type="date" name="tgl_surat" value="<?= $spk->tgl_surat ?>" class="form-control" id="tgl_surat" placeholder="Tanggal Surat :" readonly required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="perihal">Perihal</label>
+                  <textarea name="perihal" class="form-control" id="perihal" rows="2" placeholder="Perihal :" required><?= $spk->perihal ?></textarea>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4">
+                    <label for="kelas_asal">Kelas Asal</label>
+                    <input type="text" name="kelas_asal" value="<?= $spk->kelas_asal ?>" class="form-control" id="kelas_asal" placeholder="Kelas Asal :" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="kelas_tujuan">Kelas Tujuan</label>
+                    <input type="text" name="kelas_tujuan" value="<?= $spk->kelas_tujuan ?>" class="form-control" id="kelas_tujuan" placeholder="Kelas Tujuan :" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="alasan">Alasan</label>
+                    <input type="text" name="alasan" value="<?= $spk->alasan ?>" class="form-control" id="alasan" placeholder="Alasan :" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="summernote">Body Surat</label>
+                  <textarea name="body_surat" id="summernote" class="form-control" style="height: 300px" required><?= $spk->body_surat ?></textarea>
+                </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer text-right">
+                <button type="reset" class="btn btn-secondary">Reset</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
