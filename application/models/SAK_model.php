@@ -90,6 +90,7 @@ class SAK_model extends CI_Model
       'nidn_dekan' => $this->input->post('nidn_dekan'),
       'nim_mhs' => $this->input->post('nim_mhs'),
       'tgl_surat' => $this->input->post('tgl_surat'),
+      'thn_ajaran' => $this->input->post('thn_ajaran'),
       'body_surat' => $this->input->post('body_surat')
     ];
 
@@ -103,6 +104,7 @@ class SAK_model extends CI_Model
       'nidn_dekan' => $this->input->post('nidn_dekan'),
       'nim_mhs' => $this->input->post('nim_mhs'),
       'tgl_surat' => $this->input->post('tgl_surat'),
+      'thn_ajaran' => $this->input->post('thn_ajaran'),
       'body_surat' => $this->input->post('body_surat')
     ];
 

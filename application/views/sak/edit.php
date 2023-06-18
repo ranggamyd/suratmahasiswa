@@ -122,22 +122,14 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="form-group col-md-4">
-                    <label for="nama_instansi">Nama Instansi</label>
-                    <input type="text" name="nama_instansi" value="<?= $sak->nama_instansi ?>" class="form-control" id="nama_instansi" placeholder="Nama Instansi :" required>
-                  </div>
                   <div class="form-group col-md-5">
-                    <label for="alamat_instansi">Alamat Instansi</label>
-                    <input type="text" name="alamat_instansi" value="<?= $sak->alamat_instansi ?>" class="form-control" id="alamat_instansi" placeholder="Alamat Instansi :" required>
+                    <label for="thn_ajaran">Tahun Ajaran</label>
+                    <input type="text" name="thn_ajaran" value="<?= $sak->thn_ajaran ?>" class="form-control" id="thn_ajaran" placeholder="Tahun Ajaran :" required>
                   </div>
-                  <div class="form-group col-md-3">
+                  <div class="form-group col-md-5 offset-md-2">
                     <label for="tgl_surat">Tanggal Surat</label>
                     <input type="date" name="tgl_surat" value="<?= $sak->tgl_surat ?>" class="form-control" id="tgl_surat" placeholder="Tanggal Surat :" readonly required>
                   </div>
-                </div>
-                <div class="form-group">
-                  <label for="perihal">Perihal</label>
-                  <textarea name="perihal" class="form-control" id="perihal" rows="2" placeholder="Perihal :" required><?= $sak->perihal ?></textarea>
                 </div>
                 <div class="form-group">
                   <label for="summernote">Body Surat</label>

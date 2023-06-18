@@ -122,8 +122,8 @@
                 </div>
                 <div class="row">
                   <div class="form-group col-md-5">
-                    <label for="tahun_ajaran">Tahun Ajaran</label>
-                    <input type="text" name="tahun_ajaran" value="<?= $format_default->tahun_ajaran_default ?>" class="form-control" id="tahun_ajaran" placeholder="Alamat Instansi :" required>
+                    <label for="thn_ajaran">Tahun Ajaran</label>
+                    <input type="text" name="thn_ajaran" value="<?= $format_default->tahun_ajaran_default ?>" class="form-control" id="thn_ajaran" placeholder="Tahun Ajaran :" required>
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
                     <label for="tgl_surat">Tanggal Surat</label>

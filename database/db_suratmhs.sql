@@ -50,7 +50,7 @@ VALUES
     '03.01.12.164',
     'Nuri Kartini, M.T.,IPM.,AER',
     'dekan@email.com',
-    '1234'
+    '03.01.12.164'
   );
 
 -- --------------------------------------------------------
@@ -92,7 +92,7 @@ VALUES
     1,
     'skl',
     '<!-- SKL --><table style=\"width:100%\"><tr style=\"text-align:center\"><td colspan=\"3\"><b><u>SURAT KETERANGAN LULUS</u></b></td></tr><tr style=\"text-align:center\"><td colspan=\"3\">Nomor : @no_surat</td></tr><tr><td colspan=\"3\"><br>Yang bertanda tangan dibawah ini :</td></tr><tr><td style=\"width:20%\">Nama</td><td style=\"width:0%\">:</td><td style=\"width:80%\">@nama_dekan</td></tr><tr><td>Jabatan</td><td>:</td><td>Dekan Fakultas Teknik</td></tr><tr><td>NIK/NIDN</td><td>:</td><td>@nidn_dekan</td></tr><tr><td colspan=\"3\"><br>Menerangkan dengan sesungguhnya bahwa :</td></tr><tr><td>Nama</td><td>:</td><td>@nama_mhs</td></tr><tr><td>NIM</td><td>:</td><td>@nim_mhs</td></tr><tr style=\"text-align:justify\"><td colspan=\"3\"><br>Telah memenuhi persyaratan akademik dan yang bersangkutan dinyatakan telah melaksanakan sidang akhir untuk menempuh gelar @gelar pada Program Studi @nama_prodi Fakultas Teknik Universitas Muhammadiyah Cirebon pada Tanggal @tgl_lulus dan dinyatakan LULUS, dengan IPK @ipk</td></tr><tr><td colspan=\"3\"><br>Demikian surat keterangan lulus ini dibuat untuk digunakan sebagai @keperluan.</td></tr><tr><td colspan=\"3\"><br>Cirebon, @tgl_surat</td></tr><tr><td colspan=\"3\">Dekan</td></tr><tr><td colspan=\"3\"><br><br><br><br><br><u>@ttd_nama_dekan</u></td></tr><tr><td colspan=\"3\">NIK. @ttd_nidn_dekan</td></tr></table>',
-    '1234',
+    '03.01.12.164',
     '',
     ''
   ),
@@ -100,7 +100,7 @@ VALUES
     2,
     'sps',
     '<!-- SPS --><table style=\"width:100%\"><tbody><tr><td style=\"width:20%\"><span>No. Surat</span></td><td style=\"width:0%\"><span>:</span></td><td style=\"width:80%\"><span>@no_surat</span></td></tr><tr><td><span>Lampiran</span></td><td><span>:</span></td><td><span>-</span></td></tr><tr><td><span>Perihal</span></td><td><span>:</span></td><td><span>@perihal</span></td></tr><tr style=\"vertical-align:top\"><td><br><span>Kepada</span></td><td><br><span>:</span></td><td><br><span>Yth.</span><br><b>@nama_instansi</b><br>@alamat_instansi<br></td></tr><tr style=\"vertical-align:top\"><td></td><td></td><td><p><i>Assalamu\'alaikum warahmatullahi wabarakatuh</i></p><p style=\"text-align:justify\">Ba’da salam, semoga kita semua selalu dalam keadaan sehat wal’afiat dan berada dalam lindungan Allah SWT dan sukses dalam menjalankan aktifitas sehari-hari. Aamiin.</p><p style=\"text-align:justify\">Dalam rangka penyusunan skripsi mahasiswa Program Studi @nama_prodi di bawah ini :</p><table border=\"1\" cellspacing=\"0\" width=\"100%\"><tbody><tr><th style=\"padding:.5rem;text-align:center\">NAMA / NIM</th><th style=\"padding:.5rem;text-align:center\">SEMESTER</th><th style=\"padding:.5rem;text-align:center\">PRODI</th></tr><tr><td style=\"padding:.5rem\">@nama_mhs</td><td style=\"padding:.5rem;text-align:center\">@semester</td><td style=\"padding:.5rem;text-align:center\">@nama_prodi_2</td></tr></tbody></table><p>Bermaksud menghadap Bapak/Ibu dan apabila memungkinkan kiranya yang bersangkutan dapat diberikan ijin untuk melakukan observasi dan pengambilan data mahasiswa pada Instansi/Perusahaan yang bapak pimpin, sebagai penunjang untuk penyusunan skripsi.</p><p>Demikian permohonan ini kami sampaikan, atas perhatian dan kerjasamanya kami sampaikan terima kasih.</p><p><i>Wassalamu’alaikum warahmatullahi wabarakatuh</i></p></td></tr><tr style=\"vertical-align:top\"><td></td><td></td><td>Cirebon, @tgl_surat<br>Dekan<br><br><br><br><br><u>@ttd_nama_dekan</u><br>NIK : @ttd_nidn_dekan</td></tr></tbody></table>',
-    '1234',
+    '03.01.12.164',
     'Permohonan Observasi dan Ijin Pengambilan Data',
     ''
   ),
@@ -108,15 +108,15 @@ VALUES
     3,
     'sokp',
     '<!-- SOKP --><table style=\"width:100%\"><tbody><tr><td style=\"width:20%\"><span>No. Surat</span></td><td style=\"width:0%\"><span>:</span></td><td style=\"width:80%\"><span>@no_surat</span></td></tr><tr><td><span>Lampiran</span></td><td><span>:</span></td><td><span>-</span></td></tr><tr><td><span>Perihal</span></td><td><span>:</span></td><td><span>@perihal</span></td></tr><tr style=\"vertical-align:top\"><td><br><span>Kepada</span></td><td><br><span>:</span></td><td><br><span>Yth.</span><br><b>@nama_instansi</b><br>@alamat_instansi<br></td></tr><tr style=\"vertical-align:top\"><td></td><td></td><td><p><i>Assalamu\'alaikum warahmatullahi wabarakatuh</i></p><p style=\"text-align:justify\">Ba’da salam, semoga kita semua selalu dalam keadaan sehat wal’afiat dan berada dalam lindungan Allah SWT dan sukses dalam menjalankan aktifitas sehari-hari. Aamiin.</p><p style=\"text-align:justify\">Dalam rangka menunjang kegiatan perkuliahan pada mata kuliah Sistem Informasi, kami dari Program Studi @nama_prodi Fakultas Teknik Universitas Muhammadiyah Cirebon, dengan hormat mahasiswa kami yang tersebut dibawah ini:</p><table border=\"1\" width=\"100%\"><tbody><tr><th style=\"padding:.5rem;text-align:center\">NAMA / NIM</th><th style=\"padding:.5rem;text-align:center\">PRODI</th></tr><tr><td style=\"padding:.5rem\"><p>@nama_mhs</p></td><td style=\"padding:.5rem;text-align:center\"><p>@nama_prodi_2</p></td></tr></tbody></table><p>Dapat diperkenankan melakukan Observasi Kunjungan pada instansi yang Bapak/Ibu pimpin.</p><p>Demikian permohonan ini kami sampaikan, atas perhatian dan kerjasamanya kami sampaikan terima kasih.</p><p><i>Wassalamu’alaikum warahmatullahi wabarakatuh</i></p></td></tr><tr style=\"vertical-align:top\"><td></td><td></td><td>Cirebon, @tgl_surat<br>Dekan<br><br><br><br><br><u>@ttd_nama_dekan</u><br>NIK : @ttd_nidn_dekan</td></tr></tbody></table>',
-    '1234',
+    '03.01.12.164',
     'Surat Permohonan Observasi',
     ''
   ),
   (
     4,
     'sak',
-    '<!-- SAK --><table style=\"width:100%\"><tr style=\"text-align:center\"><td colspan=\"3\"><b><u>SURAT KETERANGAN KULIAH</u></b></td></tr><tr style=\"text-align:center\"><td colspan=\"3\">Nomor : @no_surat</td></tr><tr><td colspan=\"3\"><br>Yang bertanda tangan dibawah ini :</td></tr><tr><td style=\"width:30%\">Nama</td><td style=\"width:0%\">:</td><td style=\"width:70%\">@nama_dekan</td></tr><tr><td>Jabatan</td><td>:</td><td>Dekan Fakultas Teknik</td></tr><tr><td colspan=\"3\"><br>Dengan ini menerangkan dengan sesungguhnya bahwa :</td></tr><tr><td>Nama</td><td>:</td><td>@nama_mhs</td></tr><tr><td>NIM</td><td>:</td><td>@nim_mhs</td></tr><tr><td colspan=\"3\"><br>Dengan nama orang tua dari mahasiswa tersebut :</td></tr><tr><td>Nama</td><td>:</td><td>@nama_ortu</td></tr><tr><td>NIP/NRP/NIK</td><td>:</td><td>@nip</td></tr><tr><td>Pangkat & Golongan</td><td>:</td><td>@pangkat / @golongan</td></tr><tr><td>Tempat Kerja / Instansi</td><td>:</td><td>@tempat_kerja</td></tr><tr><td>Alamat Rumah</td><td>:</td><td>@alamat_rumah</td></tr><tr><td colspan=\"3\"><br>Adalah benar mahasiswa aktif pada :</td></tr><tr><td>Fakultas</td><td>:</td><td>Teknik</td></tr><tr><td>Program Studi</td><td>:</td><td>@nama_prodi</td></tr><tr><td>Tingkat / Semester</td><td>:</td><td>@tingkat / @semester</td></tr><tr><td>Tahun Ajaran</td><td>:</td><td>@tahun_ajaran</td></tr><tr><td colspan=\"3\"><br>Demikian surat keterangan aktif kuliah ini dibuat dengan sesungguhnya dan untuk dipergunakan sebagaimana mestinya</td></tr><tr><td colspan=\"3\"><br>Cirebon, @tgl_surat</td></tr><tr><td colspan=\"3\">Dekan</td></tr><tr><td colspan=\"3\"><br><br><br><br><br><u>@ttd_nama_dekan</u></td></tr><tr><td colspan=\"3\">NIK. @ttd_nidn_dekan</td></tr></table>',
-    '1234',
+    '<!-- SAK --><table style=\"width:100%\"><tr style=\"text-align:center\"><td colspan=\"3\"><b><u>SURAT KETERANGAN KULIAH</u></b></td></tr><tr style=\"text-align:center\"><td colspan=\"3\">Nomor : @no_surat</td></tr><tr><td colspan=\"3\"><br>Yang bertanda tangan dibawah ini :</td></tr><tr><td style=\"width:30%\">Nama</td><td style=\"width:0%\">:</td><td style=\"width:70%\">@nama_dekan</td></tr><tr><td>Jabatan</td><td>:</td><td>Dekan Fakultas Teknik</td></tr><tr><td colspan=\"3\"><br>Dengan ini menerangkan dengan sesungguhnya bahwa :</td></tr><tr><td>Nama</td><td>:</td><td>@nama_mhs</td></tr><tr><td>NIM</td><td>:</td><td>@nim_mhs</td></tr><tr><td colspan=\"3\"><br>Dengan nama orang tua dari mahasiswa tersebut :</td></tr><tr><td>Nama</td><td>:</td><td>@nama_ortu</td></tr><tr><td>NIP/NRP/NIK</td><td>:</td><td>@nip</td></tr><tr><td>Pangkat & Golongan</td><td>:</td><td>@pangkat / @golongan</td></tr><tr><td>Tempat Kerja / Instansi</td><td>:</td><td>@tempat_kerja</td></tr><tr><td>Alamat Rumah</td><td>:</td><td>@alamat_rumah</td></tr><tr><td colspan=\"3\"><br>Adalah benar mahasiswa aktif pada :</td></tr><tr><td>Fakultas</td><td>:</td><td>Teknik</td></tr><tr><td>Program Studi</td><td>:</td><td>@nama_prodi</td></tr><tr><td>Tingkat / Semester</td><td>:</td><td>@tingkat / @semester</td></tr><tr><td>Tahun Ajaran</td><td>:</td><td>@thn_ajaran</td></tr><tr><td colspan=\"3\"><br>Demikian surat keterangan aktif kuliah ini dibuat dengan sesungguhnya dan untuk dipergunakan sebagaimana mestinya</td></tr><tr><td colspan=\"3\"><br>Cirebon, @tgl_surat</td></tr><tr><td colspan=\"3\">Dekan</td></tr><tr><td colspan=\"3\"><br><br><br><br><br><u>@ttd_nama_dekan</u></td></tr><tr><td colspan=\"3\">NIK. @ttd_nidn_dekan</td></tr></table>',
+    '03.01.12.164',
     '',
     '2023/2024'
   ),
@@ -124,7 +124,7 @@ VALUES
     5,
     'spkl',
     '<!-- SPKL --><table style=\"width:100%\"><tbody><tr><td style=\"width:20%\"><span>No. Surat</span></td><td style=\"width:0%\"><span>:</span></td><td style=\"width:80%\"><span>@no_surat</span></td></tr><tr><td><span>Lampiran</span></td><td><span>:</span></td><td><span>-</span></td></tr><tr><td><span>Perihal</span></td><td><span>:</span></td><td><span>@perihal</span></td></tr><tr style=\"vertical-align:top\"><td><br><span>Kepada</span></td><td><br><span>:</span></td><td><br><span>Yth.</span><br><b>@nama_instansi</b><br>@alamat_instansi<br></td></tr><tr style=\"vertical-align:top\"><td></td><td></td><td><p><i>Assalamu\'alaikum warahmatullahi wabarakatuh</i></p><p style=\"text-align:justify\">Ba’da salam, semoga kita semua selalu dalam keadaan sehat wal’afiat dan berada dalam lindungan Allah SWT dan sukses dalam menjalankan aktifitas sehari-hari. Aamiin.</p><p style=\"text-align:justify\">Dalam rangka menunjang kegiatan perkuliahan pada mata kuliah Sistem Informasi, kami dari Program Studi @nama_prodi Fakultas Teknik Universitas Muhammadiyah Cirebon, dengan hormat mahasiswa kami yang tersebut dibawah ini:</p><table border=\"1\" cellspacing=\"0\" width=\"100%\"><tbody><tr><th style=\"padding:.5rem;text-align:center\">NAMA / NIM</th><th style=\"padding:.5rem;text-align:center\">PRODI</th></tr><tr><td style=\"padding:.5rem\"><p>@nama_mhs</p></td><td style=\"padding:.5rem;text-align:center\"><p>@nama_prodi_2</p></td></tr></tbody></table><p>Dapat diperkenankan melakukan PKL pada instansi yang Bapak/Ibu pimpin.</p><p>Demikian permohonan ini kami sampaikan, atas perhatian dan kerjasamanya kami sampaikan terima kasih.</p><p><i>Wassalamu’alaikum warahmatullahi wabarakatuh</i></p></td></tr><tr style=\"vertical-align:top\"><td></td><td></td><td>Cirebon, @tgl_surat<br>Dekan<br><br><br><br><br><u>@ttd_nama_dekan</u><br>NIK : @ttd_nidn_dekan</td></tr></tbody></table>',
-    '1234',
+    '03.01.12.164',
     'Surat Permohonan PKL',
     ''
   ),
@@ -148,7 +148,7 @@ VALUES
     8,
     'spp',
     '<!-- SPP --><table style=\"width:100%\"><tbody><tr><td style=\"width:20%\"><span>No. Surat</span></td><td style=\"width:0%\"><span>:</span></td><td style=\"width:80%\"><span>@no_surat</span></td></tr><tr><td><span>Lampiran</span></td><td><span>:</span></td><td><span>-</span></td></tr><tr><td><span>Perihal</span></td><td><span>:</span></td><td><span>@perihal</span></td></tr><tr style=\"vertical-align:top\"><td><br><span>Kepada</span></td><td><br><span>:</span></td><td><br><span>Yth.</span><br><b>@tujuan</b><br><b>@instansi</b><br><br>Di Tempat,</td></tr><tr style=\"vertical-align:top\"><td colspan=\"3\"><p><i>Assalamu\'alaikum warahmatullahi wabarakatuh</i></p><p style=\"text-align:justify\">Ba’da salam, semoga kita semua selalu dalam keadaan sehat wal’afiat dan berada dalam lindungan Allah SWT dan sukses dalam menjalankan aktifitas sehari-hari. Aamiin.</p><table style=\"width:100%\"><tr><td colspan=\"3\">Dengan hormat, Saya yang bertanda tangan di bawah ini :</td></tr><tr><td style=\"width:10%\">Nama</td><td style=\"width:0%\">:</td><td style=\"width:90%\">@nama_kaprodi</td></tr><tr><td>Jabatan</td><td>:</td><td>Kaprodi @nama_prodi</td></tr><tr><td colspan=\"3\"><br>Menindaklanjuti surat permohonan pindah prodi dari mahasiswa berikut:</td></tr><tr><td>Nama</td><td>:</td><td>@nama_mhs</td></tr><tr><td>NIM</td><td>:</td><td>@nim_mhs</td></tr><tr><td>Prodi</td><td>:</td><td>@nama_prodi_2</td></tr></table><p style=\"text-align:justify\">Yang mengajukan pindah prodi dari @prodi_asal ke prodi @prodi_tujuan dengan alasan @alasan, maka dengan ini kami menyatakan persetujuan mahasiswa atas nama tersebut.</p><p style=\"text-align:justify\">Demikian surat persetujuan ini kami sampaikan, agar dapat lanjutkan proses administrasi perpindahan mahasiswa tersebut pada Biro Akademik dan Keuangan.</p><p><i>Wassalamu’alaikum warahmatullahi wabarakatuh</i></p><br></td></tr><tr style=\"vertical-align:top\"><td colspan=\"3\"><table style=\"width: 100%\"><tr><td style=\"text-align:center\"><br><br>Mengetahui<br>Dekan<br><br><br><br><br><u>@ttd_nama_dekan</u><br>NIK : @ttd_nidn_dekan</td><td style=\"text-align:center\">Cirebon, @tgl_surat<br><br>Menyetujui<br>Kaprodi<br><br><br><br><br><u>@ttd_nama_kaprodi</u><br>NIDN : @ttd_nidn_kaprodi</td></tr></table></td></tr></tbody></table>',
-    '1234',
+    '03.01.12.164',
     'Persetujuan Pindah Prodi',
     ''
   );
@@ -182,7 +182,7 @@ VALUES
     'Budi Susanto, S.Si.,M.Sc',
     1,
     'kaprodi@email.com',
-    '1234'
+    '03.01.12.164'
   );
 
 -- --------------------------------------------------------
@@ -242,6 +242,7 @@ CREATE TABLE `sak` (
   `nim_mhs` char(9) NOT NULL,
   `nidn_dekan` char(15) NOT NULL,
   `tgl_surat` date NOT NULL,
+  `thn_ajaran` varchar(10) NOT NULL,
   `body_surat` text NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
