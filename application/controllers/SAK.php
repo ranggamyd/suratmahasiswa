@@ -24,6 +24,35 @@ class SAK extends CI_Controller
     $this->load->view('parts/footer', $data);
   }
 
+  function send_notification($target, $message)
+  {
+
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => 'https://api.fonnte.com/send',
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'POST',
+      CURLOPT_POSTFIELDS => array(
+        'target' => $target,
+        'message' => $message,
+      ),
+      CURLOPT_HTTPHEADER => array(
+        'Authorization: SCpzf92Izxc2uhS3ds#c'
+      ),
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+    echo $response;
+  }
+
   public function index()
   {
     $data = [
@@ -61,6 +90,9 @@ class SAK extends CI_Controller
   function proses_buat()
   {
     $this->sak_model->buat();
+    $mhs = $this->mahasiswa_model->get_mahasiswa($this->input->post('nim_mhs'));
+    $this->send_notification("082340101670", "*== PEMBERITAHUAN ==*\n\nMahasiswa bernama *$mhs->nama_mhs* baru saja mengajukan Surat Aktif Kuliah. Mohon untuk segera ditindak lanjuti sebagaimana mestinya.\nTerima kasih!");
+
     $this->session->set_flashdata('sukses', 'SAK berhasil dibuatkan!');
     redirect('sak');
   }
@@ -89,6 +121,28 @@ class SAK extends CI_Controller
   {
     $this->sak_model->hapus($id);
     $this->session->set_flashdata('sukses', 'SAK berhasil dihapus!');
+    redirect('sak');
+  }
+
+  function terima($id)
+  {
+    $this->db->update('sak', ['status_surat' => 'Dikonfirmasi'], ['id_sak' => $id]);
+    $sak = $this->sak_model->get_sak($id);
+    $mhs = $this->mahasiswa_model->get_mahasiswa($sak->nim_mhs);
+    $this->send_notification($mhs->no_telp, "*== PEMBERITAHUAN ==*\n\nSurat Aktif Kuliah anda sudah selesai dibuat. Mohon untuk segera mengambil surat di TU Fakultas.\nTerima kasih!");
+
+    $this->session->set_flashdata('sukses', 'SAK berhasil dikonfirmasi!');
+    redirect('sak');
+  }
+
+  function tolak($id)
+  {
+    $this->db->update('sak', ['status_surat' => 'Ditolak'], ['id_sak' => $id]);
+    $sak = $this->sak_model->get_sak($id);
+    $mhs = $this->mahasiswa_model->get_mahasiswa($sak->nim_mhs);
+    $this->send_notification($mhs->no_telp, "*== PEMBERITAHUAN ==*\n\nSurat Aktif Kuliah anda ditolak. Mohon untuk segera mengonfirmasikannya dengan TU Fakultas.\nTerima kasih!");
+
+    $this->session->set_flashdata('sukses', 'SAK berhasil ditolak!');
     redirect('sak');
   }
 

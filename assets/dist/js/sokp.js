@@ -73,6 +73,12 @@ $("#nim_mhs").on("change", function () {
       .summernote("code")
       .replace("@nama_prodi_2", $(this).find(":selected").data("nama_prodi"))
   );
+  editor.summernote(
+    "code",
+    editor
+      .summernote("code")
+      .replace("@no_telp", $(this).find(":selected").data("no_telp"))
+  );
 });
 
 $("#nidn_dekan").on("change", function () {

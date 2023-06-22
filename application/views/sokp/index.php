@@ -97,6 +97,7 @@
                     <th>Nama Mahasiswa</th>
                     <th>NIM</th>
                     <th>Tanggal</th>
+                    <th>Status</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
@@ -112,6 +113,39 @@
                       <td class="text-center"><?= $item['nim_mhs'] ?></td>
                       <td class="text-center"><?= date('d-m-Y', strtotime($item['tgl_surat'])) ?></td>
                       <td class="text-center">
+                        <?php if ($item['status_surat'] == 'Menunggu') : ?>
+                          <div class="dropdown">
+                            <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <?= $item['status_surat'] ?>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/terima/') . $item['id_sokp'] ?>">Konfirmasi</a>
+                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/tolak/') . $item['id_sokp'] ?>">Tolak Surat</a>
+                            </div>
+                          </div>
+                        <?php elseif ($item['status_surat'] == 'Dikonfirmasi') : ?>
+                          <div class="dropdown">
+                            <button class="btn btn-success btn-sm dropdown-toggle disabled" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <?= $item['status_surat'] ?>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/terima/') . $item['id_sokp'] ?>">Konfirmasi</a>
+                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/tolak/') . $item['id_sokp'] ?>">Tolak Surat</a>
+                            </div>
+                          </div>
+                        <?php else : ?>
+                          <div class="dropdown">
+                            <button class="btn btn-danger btn-sm dropdown-toggle disabled" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <?= $item['status_surat'] ?>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/terima/') . $item['id_sokp'] ?>">Konfirmasi</a>
+                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/tolak/') . $item['id_sokp'] ?>">Tolak Surat</a>
+                            </div>
+                          </div>
+                        <?php endif ?>
+                      </td>
+                      <td class="text-center">
                         <a href="<?= base_url('sokp/detail/') . $item['id_sokp'] ?>" class="btn btn-info"><i class="fas fa-eye mr-2"></i>Lihat</a>
                         <a href="<?= base_url('sokp/edit/') . $item['id_sokp'] ?>" class="btn btn-success"><i class="fas fa-edit mr-2"></i>Edit</a>
                         <a href="<?= base_url('sokp/hapus/') . $item['id_sokp'] ?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger"><i class="fas fa-trash mr-2"></i>Hapus</a>
@@ -126,6 +160,7 @@
                     <th>Nama Mahasiswa</th>
                     <th>NIM</th>
                     <th>Tanggal</th>
+                    <th>Status</th>
                     <th>Aksi</th>
                   </tr>
                 </tfoot>

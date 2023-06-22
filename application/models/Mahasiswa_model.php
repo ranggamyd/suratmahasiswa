@@ -35,9 +35,14 @@ class Mahasiswa_model extends CI_Model
     return $this->db->get('mhs')->num_rows();
   }
 
+  public function count_active_mhs()
+  {
+    return $this->db->get_where('mhs', ['status' => 'Aktif'])->num_rows();
+  }
+
   public function count_by_prodi($id_prodi)
   {
-    return $this->db->get_where('mhs', ['id_prodi' => $id_prodi])->num_rows();
+    return $this->db->get_where('mhs', ['id_prodi' => $id_prodi, 'status' => 'Aktif'])->num_rows();
   }
 
   public function tambah()
@@ -79,6 +84,7 @@ class Mahasiswa_model extends CI_Model
       'golongan' => $this->input->post('golongan'),
       'tempat_kerja' => $this->input->post('tempat_kerja'),
       'alamat_rumah' => $this->input->post('alamat_rumah'),
+      'status' => $this->input->post('status'),
     ];
 
     $this->db->update('mhs', $data, ['nim' => $this->input->post('nim')]);

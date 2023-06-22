@@ -24,6 +24,35 @@ class SPP extends CI_Controller
     $this->load->view('parts/footer', $data);
   }
 
+  function send_notification($target, $message)
+  {
+
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => 'https://api.fonnte.com/send',
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'POST',
+      CURLOPT_POSTFIELDS => array(
+        'target' => $target,
+        'message' => $message,
+      ),
+      CURLOPT_HTTPHEADER => array(
+        'Authorization: SCpzf92Izxc2uhS3ds#c'
+      ),
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+    echo $response;
+  }
+
   public function index()
   {
     $data = [
@@ -62,6 +91,9 @@ class SPP extends CI_Controller
   function proses_buat()
   {
     $this->spp_model->buat();
+    $mhs = $this->mahasiswa_model->get_mahasiswa($this->input->post('nim_mhs'));
+    $this->send_notification("082340101670", "*== PEMBERITAHUAN ==*\n\nMahasiswa bernama *$mhs->nama_mhs* baru saja mengajukan Surat Pindah Prodi. Mohon untuk segera ditindak lanjuti sebagaimana mestinya.\nTerima kasih!");
+
     $this->session->set_flashdata('sukses', 'SPP berhasil dibuatkan!');
     redirect('spp');
   }
@@ -91,6 +123,28 @@ class SPP extends CI_Controller
   {
     $this->spp_model->hapus($id);
     $this->session->set_flashdata('sukses', 'SPP berhasil dihapus!');
+    redirect('spp');
+  }
+
+  function terima($id)
+  {
+    $this->db->update('spp', ['status_surat' => 'Dikonfirmasi'], ['id_spp' => $id]);
+    $spp = $this->spp_model->get_spp($id);
+    $mhs = $this->mahasiswa_model->get_mahasiswa($spp->nim_mhs);
+    $this->send_notification($mhs->no_telp, "*== PEMBERITAHUAN ==*\n\nSurat Pindah Prodi anda sudah selesai dibuat. Mohon untuk segera mengambil surat di TU Fakultas.\nTerima kasih!");
+
+    $this->session->set_flashdata('sukses', 'spp berhasil dikonfirmasi!');
+    redirect('spp');
+  }
+
+  function tolak($id)
+  {
+    $this->db->update('spp', ['status_surat' => 'Ditolak'], ['id_spp' => $id]);
+    $spp = $this->spp_model->get_spp($id);
+    $mhs = $this->mahasiswa_model->get_mahasiswa($spp->nim_mhs);
+    $this->send_notification($mhs->no_telp, "*== PEMBERITAHUAN ==*\n\nSurat Pindah Prodi anda ditolak. Mohon untuk segera mengonfirmasikannya dengan TU Fakultas.\nTerima kasih!");
+
+    $this->session->set_flashdata('sukses', 'spp berhasil ditolak!');
     redirect('spp');
   }
 

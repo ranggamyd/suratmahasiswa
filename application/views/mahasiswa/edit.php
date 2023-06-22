@@ -64,6 +64,14 @@
                       <input type="number" name="thn_masuk" value="<?= $mahasiswa->thn_masuk ?>" min="2000" max="2100" class="form-control" id="thn_masuk" placeholder="Tuliskan Tahun Masuk" required>
                     </div>
                     <div class="form-group">
+                      <label for="email">E-Mail</label>
+                      <input type="email" name="email" value="<?= $mahasiswa->email ?>" class="form-control" id="email" placeholder="Tuliskan E-Mail">
+                    </div>
+                    <div class="form-group">
+                      <label for="no_telp">No. Telepon</label>
+                      <input type="number" name="no_telp" value="<?= $mahasiswa->no_telp ?>" class="form-control" id="no_telp" placeholder="Tuliskan No. Telepon" required>
+                    </div>
+                    <div class="form-group">
                       <label for="status">Status</label>
                       <select name="status" class="form-control" id="status" required>
                         <option value="Aktif" <?= ('Aktif' == $mahasiswa->status ? 'selected' : '') ?>>Aktif</option>

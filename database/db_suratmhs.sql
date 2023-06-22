@@ -243,6 +243,7 @@ CREATE TABLE `sak` (
   `nidn_dekan` char(15) NOT NULL,
   `tgl_surat` date NOT NULL,
   `thn_ajaran` varchar(10) NOT NULL,
+  `status_surat` enum('Menunggu', 'Dikonfirmasi', 'Ditolak') NOT NULL,
   `body_surat` text NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
@@ -259,6 +260,7 @@ CREATE TABLE `sc` (
   `nidn_kaprodi` char(15) NOT NULL,
   `nim_mhs` char(9) NOT NULL,
   `body_surat` text NOT NULL,
+  `status_surat` enum('Menunggu', 'Dikonfirmasi', 'Ditolak') NOT NULL,
   `tgl_surat` date NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
@@ -275,6 +277,7 @@ CREATE TABLE `skl` (
   `ipk` float NOT NULL,
   `tgl_surat` date DEFAULT NULL,
   `keperluan` text NOT NULL,
+  `status_surat` enum('Menunggu', 'Dikonfirmasi', 'Ditolak') NOT NULL,
   `body_surat` text NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
@@ -291,6 +294,7 @@ CREATE TABLE `sokp` (
   `alamat_instansi` text NOT NULL,
   `body_surat` text NOT NULL,
   `tgl_surat` date NOT NULL,
+  `status_surat` enum('Menunggu', 'Dikonfirmasi', 'Ditolak') NOT NULL,
   `nidn_dekan` char(15) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
@@ -310,6 +314,7 @@ CREATE TABLE `spk` (
   `kelas_tujuan` varchar(15) NOT NULL,
   `alasan` text NOT NULL,
   `tgl_surat` date NOT NULL,
+  `status_surat` enum('Menunggu', 'Dikonfirmasi', 'Ditolak') NOT NULL,
   `body_surat` text NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
@@ -326,6 +331,7 @@ CREATE TABLE `spkl` (
   `alamat_instansi` text NOT NULL,
   `body_surat` text NOT NULL,
   `tgl_surat` date NOT NULL,
+  `status_surat` enum('Menunggu', 'Dikonfirmasi', 'Ditolak') NOT NULL,
   `nidn_dekan` char(15) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
@@ -346,6 +352,7 @@ CREATE TABLE `spp` (
   `alasan` text NOT NULL,
   `tgl_surat` date NOT NULL,
   `nidn_dekan` char(15) NOT NULL,
+  `status_surat` enum('Menunggu', 'Dikonfirmasi', 'Ditolak') NOT NULL,
   `body_surat` text NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
@@ -362,6 +369,7 @@ CREATE TABLE `sps` (
   `nim_mhs` char(9) NOT NULL,
   `body_surat` text NOT NULL,
   `tgl_surat` date DEFAULT NULL,
+  `status_surat` enum('Menunggu', 'Dikonfirmasi', 'Ditolak') NOT NULL,
   `nidn_dekan` char(15) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
@@ -377,6 +385,7 @@ CREATE TABLE `user` (
   `level` enum('Administrator', 'Dekan', 'Kaprodi', 'Mahasiswa') NOT NULL,
   `nidn_dekan` char(15),
   `nidn_kaprodi` char(15),
+  `status_surat` enum('Menunggu', 'Dikonfirmasi', 'Ditolak') NOT NULL,
   `nim_mhs` char(9)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 

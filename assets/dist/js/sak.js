@@ -32,7 +32,7 @@ editor.summernote(
 );
 editor.summernote(
   "code",
-  editor.summernote("code").replace("@tahun_ajaran", $("#thn_ajaran").val())
+  editor.summernote("code").replace("@thn_ajaran", $("#thn_ajaran").val())
 );
 var tgl_surat = $("#tgl_surat").val();
 

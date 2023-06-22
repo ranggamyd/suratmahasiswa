@@ -27,7 +27,7 @@ class Dashboard extends CI_Controller
       'title' => 'Dashboard',
       'total_prodi' => $this->prodi_model->count_all(),
       'nama_prodi' => $user->level == 'Kaprodi' ? $this->db->get_where('prodi', ['id' => $this->db->get_where('kaprodi', ['nidn' => $user->nidn_kaprodi])->row('id_prodi')])->row('nama_prodi') : null,
-      'total_mahasiswa' => $this->mahasiswa_model->count_all(),
+      'total_mahasiswa' => $this->mahasiswa_model->count_active_mhs(),
       'total_mahasiswa_per_prodi' => $user->level == 'Kaprodi' ? $this->mahasiswa_model->count_by_prodi($this->db->get_where('kaprodi', ['nidn' => $user->nidn_kaprodi])->row('id_prodi')) : null,
       // 'total_dekan' => $this->dekan_model->count_all(),
       'total_kaprodi' => $this->kaprodi_model->count_all(),

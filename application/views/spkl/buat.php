@@ -104,7 +104,7 @@
                     <select name="nim_mhs" class="form-control" id="nim_mhs" required>
                       <option selected disabled>== Pilih Mahasiswa ==</option>
                       <?php foreach ($mhs as $item) : ?>
-                        <option value="<?= $item['nim'] ?>" data-nama_mhs="<?= $item['nama_mhs'] ?>" data-semester="<?= $item['semester'] ?>" data-nama_prodi="<?= $item['nama_prodi'] ?>" data-gelar="<?= $item['gelar_kelulusan'] ?>">
+                        <option value="<?= $item['nim'] ?>" data-nama_mhs="<?= $item['nama_mhs'] ?>" data-semester="<?= $item['semester'] ?>" data-no_telp="<?= $item['no_telp'] ?>" data-nama_prodi="<?= $item['nama_prodi'] ?>" data-gelar="<?= $item['gelar_kelulusan'] ?>">
                           <?= $item['nama_prodi'] ?> - <?= $item['nim'] ?> - <?= $item['nama_mhs'] ?>
                         </option>
                       <?php endforeach ?>

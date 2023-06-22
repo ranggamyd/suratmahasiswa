@@ -24,6 +24,35 @@ class SPKL extends CI_Controller
     $this->load->view('parts/footer', $data);
   }
 
+  function send_notification($target, $message)
+  {
+
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => 'https://api.fonnte.com/send',
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'POST',
+      CURLOPT_POSTFIELDS => array(
+        'target' => $target,
+        'message' => $message,
+      ),
+      CURLOPT_HTTPHEADER => array(
+        'Authorization: SCpzf92Izxc2uhS3ds#c'
+      ),
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+    echo $response;
+  }
+
   public function index()
   {
     $data = [
@@ -61,6 +90,9 @@ class SPKL extends CI_Controller
   function proses_buat()
   {
     $this->spkl_model->buat();
+    $mhs = $this->mahasiswa_model->get_mahasiswa($this->input->post('nim_mhs'));
+    $this->send_notification("082340101670", "*== PEMBERITAHUAN ==*\n\nMahasiswa bernama *$mhs->nama_mhs* baru saja mengajukan Surat Praktek Kerja Lapangan. Mohon untuk segera ditindak lanjuti sebagaimana mestinya.\nTerima kasih!");
+
     $this->session->set_flashdata('sukses', 'SPKL berhasil dibuatkan!');
     redirect('spkl');
   }
@@ -89,6 +121,28 @@ class SPKL extends CI_Controller
   {
     $this->spkl_model->hapus($id);
     $this->session->set_flashdata('sukses', 'SPKL berhasil dihapus!');
+    redirect('spkl');
+  }
+
+  function terima($id)
+  {
+    $this->db->update('spkl', ['status_surat' => 'Dikonfirmasi'], ['id_spkl' => $id]);
+    $spkl = $this->spkl_model->get_spkl($id);
+    $mhs = $this->mahasiswa_model->get_mahasiswa($spkl->nim_mhs);
+    $this->send_notification($mhs->no_telp, "*== PEMBERITAHUAN ==*\n\nSurat Praktek Kerja Lapangan anda sudah selesai dibuat. Mohon untuk segera mengambil surat di TU Fakultas.\nTerima kasih!");
+
+    $this->session->set_flashdata('sukses', 'spkl berhasil dikonfirmasi!');
+    redirect('spkl');
+  }
+
+  function tolak($id)
+  {
+    $this->db->update('spkl', ['status_surat' => 'Ditolak'], ['id_spkl' => $id]);
+    $spkl = $this->spkl_model->get_spkl($id);
+    $mhs = $this->mahasiswa_model->get_mahasiswa($spkl->nim_mhs);
+    $this->send_notification($mhs->no_telp, "*== PEMBERITAHUAN ==*\n\nSurat Praktek Kerja Lapangan anda ditolak. Mohon untuk segera mengonfirmasikannya dengan TU Fakultas.\nTerima kasih!");
+
+    $this->session->set_flashdata('sukses', 'spkl berhasil ditolak!');
     redirect('spkl');
   }
 
