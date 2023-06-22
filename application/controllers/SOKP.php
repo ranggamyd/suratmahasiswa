@@ -75,10 +75,13 @@ class SOKP extends CI_Controller
 
   function buat()
   {
+    $this->db->join('prodi', 'prodi.id = mhs.id_prodi', 'left');
+    $mhs = $this->db->get_where('mhs', ['nim' => $this->session->userdata('nim_mhs')])->result_array();
+
     $data = [
       'title' => 'Buat SOKP',
       'no_surat' => $this->sokp_model->set_no_surat(),
-      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $mhs : $this->mahasiswa_model->get_active_mhs(),
       'dekan' => $this->dekan_model->get_all(),
       'format_default' => $this->format_surat_default_model->get_sokp(),
       'js' => 'sokp.js'
@@ -99,10 +102,13 @@ class SOKP extends CI_Controller
 
   function edit($id)
   {
+    $this->db->join('prodi', 'prodi.id = mhs.id_prodi', 'left');
+    $mhs = $this->db->get_where('mhs', ['nim' => $this->session->userdata('nim_mhs')])->result_array();
+
     $data = [
       'title' => 'Buat SOKP',
       'sokp' => $this->sokp_model->get_sokp($id),
-      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $mhs : $this->mahasiswa_model->get_active_mhs(),
       'dekan' => $this->dekan_model->get_all(),
       'js' => 'sokp.js'
     ];

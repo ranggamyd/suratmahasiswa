@@ -75,10 +75,13 @@ class SC extends CI_Controller
 
   function buat()
   {
+    $this->db->join('prodi', 'prodi.id = mhs.id_prodi', 'left');
+    $mhs = $this->db->get_where('mhs', ['nim' => $this->session->userdata('nim_mhs')])->result_array();
+
     $data = [
       'title' => 'Buat SC',
       'no_surat' => $this->sc_model->set_no_surat(),
-      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $mhs : $this->mahasiswa_model->get_active_mhs(),
       'kaprodi' => $this->kaprodi_model->get_all(),
       'format_default' => $this->format_surat_default_model->get_sc(),
       'js' => 'sc.js'
@@ -99,10 +102,13 @@ class SC extends CI_Controller
 
   function edit($id)
   {
+    $this->db->join('prodi', 'prodi.id = mhs.id_prodi', 'left');
+    $mhs = $this->db->get_where('mhs', ['nim' => $this->session->userdata('nim_mhs')])->result_array();
+
     $data = [
       'title' => 'Buat SC',
       'sc' => $this->sc_model->get_sc($id),
-      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $mhs : $this->mahasiswa_model->get_active_mhs(),
       'kaprodi' => $this->kaprodi_model->get_all(),
       'js' => 'sc.js'
     ];
