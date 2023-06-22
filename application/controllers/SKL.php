@@ -78,7 +78,7 @@ class SKL extends CI_Controller
     $data = [
       'title' => 'Buat SKL',
       'no_surat' => $this->skl_model->set_no_surat(),
-      'mhs' => $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
       'dekan' => $this->dekan_model->get_all(),
       'format_default' => $this->format_surat_default_model->get_skl(),
       'js' => 'skl.js'
@@ -102,7 +102,7 @@ class SKL extends CI_Controller
     $data = [
       'title' => 'Buat SKL',
       'skl' => $this->skl_model->get_skl($id),
-      'mhs' => $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
       'dekan' => $this->dekan_model->get_all(),
       'js' => 'skl.js'
     ];

@@ -78,7 +78,7 @@ class SPS extends CI_Controller
     $data = [
       'title' => 'Buat SPS',
       'no_surat' => $this->sps_model->set_no_surat(),
-      'mhs' => $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
       'dekan' => $this->dekan_model->get_all(),
       'format_default' => $this->format_surat_default_model->get_sps(),
       'js' => 'sps.js'
@@ -102,7 +102,7 @@ class SPS extends CI_Controller
     $data = [
       'title' => 'Buat SPS',
       'sps' => $this->sps_model->get_sps($id),
-      'mhs' => $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
       'dekan' => $this->dekan_model->get_all(),
       'js' => 'sps.js'
     ];

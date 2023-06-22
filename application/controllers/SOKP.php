@@ -78,7 +78,7 @@ class SOKP extends CI_Controller
     $data = [
       'title' => 'Buat SOKP',
       'no_surat' => $this->sokp_model->set_no_surat(),
-      'mhs' => $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
       'dekan' => $this->dekan_model->get_all(),
       'format_default' => $this->format_surat_default_model->get_sokp(),
       'js' => 'sokp.js'
@@ -102,7 +102,7 @@ class SOKP extends CI_Controller
     $data = [
       'title' => 'Buat SOKP',
       'sokp' => $this->sokp_model->get_sokp($id),
-      'mhs' => $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
       'dekan' => $this->dekan_model->get_all(),
       'js' => 'sokp.js'
     ];

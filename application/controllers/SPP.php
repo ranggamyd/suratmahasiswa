@@ -78,7 +78,7 @@ class SPP extends CI_Controller
     $data = [
       'title' => 'Buat SPP',
       'no_surat' => $this->spp_model->set_no_surat(),
-      'mhs' => $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
       'dekan' => $this->dekan_model->get_all(),
       'kaprodi' => $this->kaprodi_model->get_all(),
       'format_default' => $this->format_surat_default_model->get_spp(),
@@ -103,7 +103,7 @@ class SPP extends CI_Controller
     $data = [
       'title' => 'Buat SPP',
       'spp' => $this->spp_model->get_spp($id),
-      'mhs' => $this->mahasiswa_model->get_active_mhs(),
+      'mhs' => $this->session->userdata('level') == 'Mahasiswa' ? $this->db->get_where('mhs', ['nim_mhs' => $this->session->userdata('nim_mhs')->result_array()]) : $this->mahasiswa_model->get_active_mhs(),
       'dekan' => $this->dekan_model->get_all(),
       'kaprodi' => $this->kaprodi_model->get_all(),
       'js' => 'spp.js'
