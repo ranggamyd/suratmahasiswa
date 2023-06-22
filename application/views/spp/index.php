@@ -115,7 +115,7 @@
                       <td class="text-center">
                         <?php if ($item['status_surat'] == 'Menunggu') : ?>
                           <div class="dropdown">
-                            <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-primary btn-sm dropdown-toggle <?= $this->session->userdata('level') != 'Administrator' ? 'disabled' : '' ?>" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <?= $item['status_surat'] ?>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

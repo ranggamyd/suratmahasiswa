@@ -43,7 +43,7 @@ class SKL extends CI_Controller
         'message' => $message,
       ),
       CURLOPT_HTTPHEADER => array(
-        'Authorization: mj@qJ!QMEBjhb7aFSX6m'
+        'Authorization: M9X6wZ#LkpSzwX6teMp#'
       ),
     ));
 
