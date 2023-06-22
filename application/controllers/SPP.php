@@ -43,7 +43,7 @@ class SPP extends CI_Controller
         'message' => $message,
       ),
       CURLOPT_HTTPHEADER => array(
-        'Authorization: SCpzf92Izxc2uhS3ds#c'
+        'Authorization: mj@qJ!QMEBjhb7aFSX6m'
       ),
     ));
 
