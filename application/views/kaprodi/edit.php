@@ -57,13 +57,6 @@
                   <label for="no_telp">No. Telepon</label>
                   <input type="number" name="no_telp" value="<?= $kaprodi->no_telp ?>" class="form-control" id="no_telp" placeholder="Tuliskan No. Telepon" required>
                 </div>
-                <div class="form-group">
-                  <label for="status">Status</label>
-                  <select name="status" class="form-control" id="status" required>
-                    <option value="Aktif" <?= ('Aktif' == $kaprodi->status ? 'selected' : '') ?>>Aktif</option>
-                    <option value="Nonaktif" <?= ('Nonaktif' == $kaprodi->status ? 'selected' : '') ?>>Nonaktif</option>
-                  </select>
-                </div>
               </div>
               <!-- /.card-body -->
               <div class="card-footer text-right">
