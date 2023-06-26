@@ -34,9 +34,7 @@ class User_model extends CI_Model
   public function edit()
   {
     $data = [
-      'nama_user' => $this->input->post('nama_user'),
-      'username' => $this->input->post('username'),
-      'password' => md5($this->input->post('username')),
+      'nama_user' => $this->input->post('nama_user')
     ];
 
     $this->db->update('user', $data, ['id' => $this->input->post('id')]);

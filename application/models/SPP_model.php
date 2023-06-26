@@ -47,9 +47,10 @@ class SPP_model extends CI_Model
       $nomor_urut = explode('/', $no_surat_terakhir)[0];
       $prefix = explode('/', $no_surat_terakhir)[1];
       $suffix = explode('/', $no_surat_terakhir)[2];
+      $cat = explode('/', $no_surat_terakhir)[3];
       $nomor_urut++;
 
-      $no_surat = sprintf("%03d", $nomor_urut) . '/' . $prefix . '/' . $suffix . '/' . $bulan_romawi . '/' . $tahun;
+      $no_surat = sprintf("%03d", $nomor_urut) . '/' . $prefix . '/' . $suffix . '/' . $cat . '/' . $bulan_romawi . '/' . $tahun;
     } else {
       $no_surat = '001/2.b/UMC-FT/SP.TIF/' . $bulan_romawi . '/' . $tahun;
     }
