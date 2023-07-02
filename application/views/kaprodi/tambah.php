@@ -43,7 +43,7 @@
                 <div class="form-group">
                   <label for="id_prodi">Prodi</label>
                   <select name="id_prodi" class="form-control" id="id_prodi" required>
-                    <option>== Pilih Prodi ==</option>
+                    <option value="">== Pilih Prodi ==</option>
                     <?php foreach ($prodi as $item) : ?>
                       <option value="<?= $item['id'] ?>"><?= $item['nama_prodi'] ?></option>
                     <?php endforeach ?>
