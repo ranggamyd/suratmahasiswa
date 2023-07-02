@@ -102,7 +102,7 @@
                   <div class="form-group col-md-6">
                     <label for="nim_mhs">Mahasiswa</label>
                     <select name="nim_mhs" class="form-control" id="nim_mhs" required>
-                      <option>== Pilih Mahasiswa ==</option>
+                      <option value="">== Pilih Mahasiswa ==</option>
                       <?php foreach ($mhs as $item) : ?>
                         <option value="<?= $item['nim'] ?>" data-nama_mhs="<?= $item['nama_mhs'] ?>" data-tingkat="<?= $item['tingkat'] ?>" data-semester="<?= $item['semester'] ?>" data-nama_ortu="<?= $item['nama_ortu'] ?>" data-nip="<?= $item['nip'] ?>" data-pangkat="<?= $item['pangkat'] ?>" data-golongan="<?= $item['golongan'] ?>" data-tempat_kerja="<?= $item['tempat_kerja'] ?>" data-alamat_rumah="<?= $item['alamat_rumah'] ?>" data-nama_prodi="<?= $item['nama_prodi'] ?>" data-gelar="<?= $item['gelar_kelulusan'] ?>">
                           <?= $item['nama_prodi'] ?> - <?= $item['nim'] ?> - <?= $item['nama_mhs'] ?>
@@ -113,7 +113,7 @@
                   <div class="form-group col-md-6">
                     <label for="nidn_dekan">Dekan</label>
                     <select name="nidn_dekan" class="form-control" id="nidn_dekan" readonly required>
-                      <option>== Pilih Dekan ==</option>
+                      <option value="">== Pilih Dekan ==</option>
                       <?php foreach ($dekan as $item) : ?>
                         <option value="<?= $item['nidn'] ?>" data-nama_dekan="<?= $item['nama_dekan'] ?>" <?= ($format_default->nidn_dekan_default == $item['nidn']) ? 'selected' : '' ?>><?= $item['nama_dekan'] ?></option>
                       <?php endforeach ?>

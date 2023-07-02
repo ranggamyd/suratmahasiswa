@@ -103,7 +103,7 @@
                   <div class="form-group col-md-6">
                     <label for="nim_mhs">Mahasiswa</label>
                     <select name="nim_mhs" class="form-control" id="nim_mhs" required>
-                      <option selected disabled>== Pilih Mahasiswa ==</option>
+                      <option value="">== Pilih Mahasiswa ==</option>
                       <?php foreach ($mhs as $item) : ?>
                         <option value="<?= $item['nim'] ?>" data-nama_mhs="<?= $item['nama_mhs'] ?>" data-semester="<?= $item['semester'] ?>" data-nama_prodi="<?= $item['nama_prodi'] ?>" data-gelar="<?= $item['gelar_kelulusan'] ?>" <?= ($item['nim'] == $spk->nim_mhs) ? 'selected' : '' ?>>
                           <?= $item['nama_prodi'] ?> - <?= $item['nim'] ?> - <?= $item['nama_mhs'] ?>
@@ -114,7 +114,7 @@
                   <div class="form-group col-md-6">
                     <label for="nidn_kaprodi">Kaprodi</label>
                     <select name="nidn_kaprodi" class="form-control" id="nidn_kaprodi" readonly required>
-                      <option selected disabled>== Pilih Kaprodi ==</option>
+                      <option value="">== Pilih Kaprodi ==</option>
                       <?php foreach ($kaprodi as $item) : ?>
                         <option value="<?= $item['nidn'] ?>" data-nama_kaprodi="<?= $item['nama_kaprodi'] ?>" data-nama_prodi="<?= $item['nama_prodi'] ?>" <?= ($item['nidn'] == $spk->nidn_kaprodi) ? 'selected' : '' ?>><?= $item['nama_kaprodi'] ?></option>
                       <?php endforeach ?>
