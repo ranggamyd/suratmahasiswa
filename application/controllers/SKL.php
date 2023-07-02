@@ -135,6 +135,7 @@ class SKL extends CI_Controller
     $this->db->update('skl', ['status_surat' => 'Dikonfirmasi'], ['id_skl' => $id]);
     $skl = $this->skl_model->get_skl($id);
     $mhs = $this->mahasiswa_model->get_mahasiswa($skl->nim_mhs);
+		$this->db->update('mhs', ['status' => 'Nonaktif'], ['nim'=>$mhs->nim]);
     $this->send_notification($mhs->no_telp, "*== PEMBERITAHUAN ==*\n\nSurat Keterangan Lulus anda sudah selesai dibuat. Mohon untuk segera mengambil surat di TU Fakultas.\nTerima kasih!");
 
     $this->session->set_flashdata('sukses', 'skl berhasil dikonfirmasi!');

@@ -94,6 +94,8 @@ class Mahasiswa_model extends CI_Model
   public function hapus($nim)
   {
     $this->db->delete('mhs', ['nim' => $nim]);
+		$this->db->delete(user, ['nim_mhs' => $nim]);
+		;
   }
 }
 

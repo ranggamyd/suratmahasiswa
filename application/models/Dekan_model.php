@@ -47,6 +47,7 @@ class Dekan_model extends CI_Model
   public function hapus($nidn)
   {
     $this->db->delete('dekan', ['nidn' => $nidn]);
+		$this->db->delete(user, ['nidn_dekan' => $nidn]);
   }
 }
 

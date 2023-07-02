@@ -51,6 +51,7 @@ class Kaprodi_model extends CI_Model
   public function hapus($nidn)
   {
     $this->db->delete('kaprodi', ['nidn' => $nidn]);
+		$this->db->delete(user, ['nidn_kaprodi' => $nidn]);
   }
 }
 

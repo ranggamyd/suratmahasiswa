@@ -98,7 +98,7 @@ class SKL_model extends CI_Model
     ];
 
     $this->db->insert('skl', $data);
-    $this->db->update('mhs', ['status' => 'Nonaktif'], ['nim' => $this->input->post('nim_mhs')]);
+    
   }
 
   public function edit()
