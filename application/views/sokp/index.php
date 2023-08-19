@@ -22,8 +22,8 @@
       <div class="col-md-3">
         <a href="<?= base_url('sokp/buat') ?>" class="btn btn-primary btn-block mb-3"><i class="fas fa-pen mr-2"></i>Buat Surat SOKP Baru</a>
 
-        <div class="card">
-          <div class="card-header">
+        <div class="card bg-gradient-primary">
+          <div class="card-header bg-gradient-primary">
             <h3 class="card-title">Jenis Surat</h3>
 
             <div class="card-tools">
@@ -82,15 +82,15 @@
       </div>
       <!-- /.col -->
       <div class="col-md-9">
-        <div class="card card-primary card-outline">
-          <div class="card-header">
+        <div class="card bg-gradient-primary">
+          <div class="card-header bg-gradient-primary">
             <h3 class="card-title"><?= $title ?></h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
             <div class="table-responsive">
-              <table id="datatable" class="table table-hover table-striped">
-                <thead class="text-center">
+              <table id="datatable" class="table table-striped">
+                <thead class="text-center bg-gradient-primary">
                   <tr>
                     <th>No</th>
                     <th>No. Surat</th>
@@ -116,20 +116,20 @@
                         <?php if ($item['status_surat'] == 'Menunggu') : ?>
                           <div class="dropdown">
                             <button class="btn btn-primary btn-sm dropdown-toggle <?= $this->session->userdata('level') != 'Administrator' ? 'disabled' : '' ?>" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <?= $item['status_surat'] ?>
+                            Menunggu tanda tangan
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/terima/') . $item['id_sokp'] ?>">Konfirmasi</a>
+                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/terima/') . $item['id_sokp'] ?>">Selesai Dibuat</a>
                               <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/tolak/') . $item['id_sokp'] ?>">Tolak Surat</a>
                             </div>
                           </div>
                         <?php elseif ($item['status_surat'] == 'Dikonfirmasi') : ?>
                           <div class="dropdown">
                             <button class="btn btn-success btn-sm dropdown-toggle disabled" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <?= $item['status_surat'] ?>
+                              Selesai Dibuat
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/terima/') . $item['id_sokp'] ?>">Konfirmasi</a>
+                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/terima/') . $item['id_sokp'] ?>">Selesai Dibuat</a>
                               <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/tolak/') . $item['id_sokp'] ?>">Tolak Surat</a>
                             </div>
                           </div>
@@ -139,7 +139,7 @@
                               <?= $item['status_surat'] ?>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/terima/') . $item['id_sokp'] ?>">Konfirmasi</a>
+                              <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/terima/') . $item['id_sokp'] ?>">Selesai Dibuat</a>
                               <a class="dropdown-item" onclick="return confirm('Apakah anda yakin?')" href="<?= base_url('sokp/tolak/') . $item['id_sokp'] ?>">Tolak Surat</a>
                             </div>
                           </div>
@@ -153,7 +153,7 @@
                     </tr>
                   <?php endforeach ?>
                 </tbody>
-                <tfoot class="text-center">
+                <tfoot class="text-center bg-gradient-primary">
                   <tr>
                     <th>No</th>
                     <th>No. Surat</th>

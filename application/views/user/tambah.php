@@ -23,8 +23,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="card">
-            <div class="card-header">
+          <div class="card bg-gradient-primary">
+            <div class="card-header bg-gradient-primary">
               <!-- <a href="<?= base_url('user/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Tambah User</a> -->
               <h3 class="card-title">Tambah User</h3>
             </div>
@@ -39,19 +39,19 @@
                 </div>
                 <div class="form-group">
                   <label for="nama_user">Nama Lengkap</label>
-                  <input type="text" name="nama_user" class="form-control" id="nama_user" placeholder="Tuliskan Nama User" required>
+                  <input type="text" name="nama_user" class="form-control bg-light" id="nama_user" placeholder="Tuliskan Nama User" required>
                 </div>
                 <div class="form-group">
                   <label for="username">Username</label>
-                  <input type="text" name="username" class="form-control" id="username" placeholder="Tuliskan Username" required>
+                  <input type="text" name="username" class="form-control bg-light" id="username" placeholder="Tuliskan Username" required>
                 </div>
                 <div class="form-group">
                   <label for="password">Password</label>
-                  <input type="password" name="password" class="form-control" id="password" placeholder="Tuliskan Password" required>
+                  <input type="password" name="password" class="form-control bg-light" id="password" placeholder="Tuliskan Password" required>
                 </div>
                 <div class="form-group">
                   <label for="level">Level</label>
-                  <input type="text" name="level" value="Administrator" class="form-control" id="level" placeholder="Tuliskan Level" readonly required>
+                  <input type="text" name="level" value="Administrator" class="form-control bg-light" id="level" placeholder="Tuliskan Level" readonly required>
                 </div>
               </div>
               <!-- /.card-body -->

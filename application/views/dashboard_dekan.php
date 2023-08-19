@@ -3,12 +3,12 @@
   <!-- Main content -->
   <section class="content">
     <div class="container-fluid p-4"><!-- Info boxes -->
-      <h2 class="text-center">Sistem Informasi Surat Mahasiswa</h2>
+      <h2 class="text-center">Sistem Informasi Pelayanan Surat Mahasiswa</h2>
       <h4 class="text-center mb-4">Fakultas Teknik Universitas Muhammadiyah Cirebon</h4>
       <div class="row">
         <div class="col text-center">
           <!-- Widget: user widget style 1 -->
-          <div class="card card-widget widget-user">
+          <div class="card card-widget widget-user bg-gradient-primary">
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header text-light vh-80" style="background: url('<?= base_url('assets') ?>/dist/img/photo1.png') center top; height: 45vh; filter: brightness(.7);">
               <div class="p-3" style="position: absolute; bottom: 10px; right: 10px; backdrop-filter: blur(10px); border-radius: 5px">

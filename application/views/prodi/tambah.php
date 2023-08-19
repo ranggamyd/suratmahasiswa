@@ -23,8 +23,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="card">
-            <div class="card-header">
+          <div class="card bg-gradient-primary">
+            <div class="card-header bg-gradient-primary">
               <!-- <a href="<?= base_url('prodi/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Tambah Prodi</a> -->
               <h3 class="card-title">Tambah Prodi</h3>
             </div>
@@ -34,11 +34,11 @@
               <div class="card-body">
                 <div class="form-group">
                   <label for="nama_prodi">Nama Program Studi</label>
-                  <input type="text" name="nama_prodi" class="form-control" id="nama_prodi" placeholder="Tuliskan Nama Prodi" required>
+                  <input type="text" name="nama_prodi" class="form-control bg-light" id="nama_prodi" placeholder="Tuliskan Nama Prodi" required>
                 </div>
                 <div class="form-group">
                   <label for="gelar_kelulusan">Gelar Kelulusan</label>
-                  <input type="text" name="gelar_kelulusan" class="form-control" id="gelar_kelulusan" placeholder="Tuliskan Nama Prodi" required>
+                  <input type="text" name="gelar_kelulusan" class="form-control bg-light" id="gelar_kelulusan" placeholder="Tuliskan Nama Prodi" required>
                 </div>
               </div>
               <!-- /.card-body -->

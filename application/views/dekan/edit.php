@@ -23,30 +23,30 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="card">
-            <div class="card-header">
+          <div class="card bg-gradient-primary">
+            <div class="card-header bg-gradient-primary">
               <!-- <a href="<?= base_url('dekan/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Tambah Dekan</a> -->
               <h3 class="card-title">Edit Dekan</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
             <form action="<?= base_url('dekan/proses_edit') ?>" method="post">
-              <div class="card-body">
+              <div class="card-body bg-gradient-primary">
                 <div class="form-group">
                   <label for="nidn">Nomor Induk Dosen Nasional</label>
-                  <input type="text" name="nidn" value="<?= $dekan->nidn ?>" class="form-control" id="nidn" placeholder="Tuliskan Nomor Induk Dosen Nasional" readonly required>
+                  <input type="text" name="nidn" value="<?= $dekan->nidn ?>" class="form-control bg-light" id="nidn" placeholder="Tuliskan Nomor Induk Dosen Nasional" readonly required>
                 </div>
                 <div class="form-group">
                   <label for="nama_dekan">Nama Lengkap</label>
-                  <input type="text" name="nama_dekan" value="<?= $dekan->nama_dekan ?>" class="form-control" id="nama_dekan" placeholder="Tuliskan Nama Dekan" required>
+                  <input type="text" name="nama_dekan" value="<?= $dekan->nama_dekan ?>" class="form-control bg-light" id="nama_dekan" placeholder="Tuliskan Nama Dekan" required>
                 </div>
                 <div class="form-group">
                   <label for="email">E-Mail</label>
-                  <input type="email" name="email" value="<?= $dekan->email ?>" class="form-control" id="email" placeholder="Tuliskan E-Mail" required>
+                  <input type="email" name="email" value="<?= $dekan->email ?>" class="form-control bg-light" id="email" placeholder="Tuliskan E-Mail" required>
                 </div>
                 <div class="form-group">
                   <label for="no_telp">No. Telepon</label>
-                  <input type="number" name="no_telp" value="<?= $dekan->no_telp ?>" class="form-control" id="no_telp" placeholder="Tuliskan No. Telepon" required>
+                  <input type="number" name="no_telp" value="<?= $dekan->no_telp ?>" class="form-control bg-light" id="no_telp" placeholder="Tuliskan No. Telepon" required>
                 </div>
               </div>
               <!-- /.card-body -->

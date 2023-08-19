@@ -23,8 +23,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="card">
-            <div class="card-header">
+          <div class="card bg-gradient-primary">
+            <div class="card-header bg-gradient-primary">
               <!-- <a href="<?= base_url('kaprodi/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Tambah Kaprodi</a> -->
               <h3 class="card-title">Tambah Kaprodi</h3>
             </div>
@@ -34,15 +34,15 @@
               <div class="card-body">
                 <div class="form-group">
                   <label for="nidn">Nomor Induk Dosen Nasional</label>
-                  <input type="text" name="nidn" class="form-control" id="nidn" placeholder="Tuliskan Nomor Induk Dosen Nasional" required>
+                  <input type="text" name="nidn" class="form-control bg-light" id="nidn" placeholder="Tuliskan Nomor Induk Dosen Nasional" required>
                 </div>
                 <div class="form-group">
                   <label for="nama_kaprodi">Nama Lengkap</label>
-                  <input type="text" name="nama_kaprodi" class="form-control" id="nama_kaprodi" placeholder="Tuliskan Nama Kaprodi" required>
+                  <input type="text" name="nama_kaprodi" class="form-control bg-light" id="nama_kaprodi" placeholder="Tuliskan Nama Kaprodi" required>
                 </div>
                 <div class="form-group">
                   <label for="id_prodi">Prodi</label>
-                  <select name="id_prodi" class="form-control" id="id_prodi" required>
+                  <select name="id_prodi" class="form-control bg-light" id="id_prodi" required>
                     <option value="">== Pilih Prodi ==</option>
                     <?php foreach ($prodi as $item) : ?>
                       <option value="<?= $item['id'] ?>"><?= $item['nama_prodi'] ?></option>
@@ -51,11 +51,11 @@
                 </div>
                 <div class="form-group">
                   <label for="email">E-Mail</label>
-                  <input type="email" name="email" class="form-control" id="email" placeholder="Tuliskan E-Mail" required>
+                  <input type="email" name="email" class="form-control bg-light" id="email" placeholder="Tuliskan E-Mail" required>
                 </div>
                 <div class="form-group">
                   <label for="no_telp">No. Telepon</label>
-                  <input type="number" name="no_telp" class="form-control" id="no_telp" placeholder="Tuliskan No. Telepon" required>
+                  <input type="number" name="no_telp" class="form-control bg-light" id="no_telp" placeholder="Tuliskan No. Telepon" required>
                 </div>
               </div>
               <!-- /.card-body -->

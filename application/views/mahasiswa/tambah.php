@@ -23,8 +23,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="card">
-            <div class="card-header">
+          <div class="card bg-gradient-primary">
+            <div class="card-header bg-gradient-primary">
               <!-- <a href="<?= base_url('mahasiswa/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Tambah Mahasiswa</a> -->
               <h3 class="card-title">Tambah Mahasiswa</h3>
             </div>
@@ -36,15 +36,15 @@
                   <div class="col">
                     <div class="form-group">
                       <label for="nim">Nomor Induk Mahasiswa</label>
-                      <input type="text" name="nim" class="form-control" id="nim" placeholder="Tuliskan Nomor Induk Mahasiswa" required>
+                      <input type="text" name="nim" class="form-control bg-light" id="nim" placeholder="Tuliskan Nomor Induk Mahasiswa" required>
                     </div>
                     <div class="form-group">
                       <label for="nama_mhs">Nama Lengkap</label>
-                      <input type="text" name="nama_mhs" class="form-control" id="nama_mhs" placeholder="Tuliskan Nama Mahasiswa" required>
+                      <input type="text" name="nama_mhs" class="form-control bg-light" id="nama_mhs" placeholder="Tuliskan Nama Mahasiswa" required>
                     </div>
                     <div class="form-group">
                       <label for="id_prodi">Prodi</label>
-                      <select name="id_prodi" class="form-control" id="id_prodi" required>
+                      <select name="id_prodi" class="form-control bg-light" id="id_prodi" required>
                         <option value="">== Pilih Prodi ==</option>
                         <?php foreach ($prodi as $item) : ?>
                           <option value="<?= $item['id'] ?>"><?= $item['nama_prodi'] ?></option>
@@ -53,49 +53,49 @@
                     </div>
                     <div class="form-group">
                       <label for="tingkat">Tingkat</label>
-                      <input type="number" name="tingkat" min="1" class="form-control" id="tingkat" placeholder="Tuliskan Tingkat" required>
+                      <input type="number" name="tingkat" min="1" class="form-control bg-light" id="tingkat" placeholder="Tuliskan Tingkat" required>
                     </div>
                     <div class="form-group">
                       <label for="semester">Semester</label>
-                      <input type="number" name="semester" min="1" class="form-control" id="semester" placeholder="Tuliskan Semester" required>
+                      <input type="number" name="semester" min="1" class="form-control bg-light" id="semester" placeholder="Tuliskan Semester" required>
                     </div>
                     <div class="form-group">
                       <label for="thn_masuk">Tahun Masuk</label>
-                      <input type="number" name="thn_masuk" min="2000" max="2100" class="form-control" id="thn_masuk" placeholder="Tuliskan Tahun Masuk" required>
+                      <input type="number" name="thn_masuk" min="2000" max="2100" class="form-control bg-light" id="thn_masuk" placeholder="Tuliskan Tahun Masuk" required>
                     </div>
                     <div class="form-group">
                       <label for="email">E-Mail</label>
-                      <input type="email" name="email" class="form-control" id="email" placeholder="Tuliskan E-Mail">
+                      <input type="email" name="email" class="form-control bg-light" id="email" placeholder="Tuliskan E-Mail">
                     </div>
                     <div class="form-group">
                       <label for="no_telp">No. Telepon</label>
-                      <input type="number" name="no_telp" class="form-control" id="no_telp" placeholder="Tuliskan No. Telepon" required>
+                      <input type="number" name="no_telp" class="form-control bg-light" id="no_telp" placeholder="Tuliskan No. Telepon" required>
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-group">
                       <label for="nama_ortu">Nama Orang Tua</label>
-                      <input type="text" name="nama_ortu" class="form-control" id="nama_ortu" placeholder="Tuliskan Nama Orang Tua" required>
+                      <input type="text" name="nama_ortu" class="form-control bg-light" id="nama_ortu" placeholder="Tuliskan Nama Orang Tua" required>
                     </div>
                     <div class="form-group">
                       <label for="nip">NIP</label>
-                      <input type="text" name="nip" class="form-control" id="nip" placeholder="Tuliskan NIP" required>
+                      <input type="text" name="nip" class="form-control bg-light" id="nip" placeholder="Tuliskan NIP" required>
                     </div>
                     <div class="form-group">
                       <label for="pangkat">Pangkat</label>
-                      <input type="text" name="pangkat" class="form-control" id="pangkat" placeholder="Tuliskan Nama Orang Tua" required>
+                      <input type="text" name="pangkat" class="form-control bg-light" id="pangkat" placeholder="Tuliskan Nama Orang Tua" required>
                     </div>
                     <div class="form-group">
                       <label for="golongan">Golongan</label>
-                      <input type="text" name="golongan" class="form-control" id="golongan" placeholder="Tuliskan Golongan" required>
+                      <input type="text" name="golongan" class="form-control bg-light" id="golongan" placeholder="Tuliskan Golongan" required>
                     </div>
                     <div class="form-group">
                       <label for="tempat_kerja">Tempat Kerja</label>
-                      <input type="text" name="tempat_kerja" class="form-control" id="tempat_kerja" placeholder="Tuliskan Tempat Kerja" required>
+                      <input type="text" name="tempat_kerja" class="form-control bg-light" id="tempat_kerja" placeholder="Tuliskan Tempat Kerja" required>
                     </div>
                     <div class="form-group">
                       <label for="alamat_rumah">Alamat Rumah</label>
-                      <input type="text" name="alamat_rumah" class="form-control" id="alamat_rumah" placeholder="Tuliskan Alamat Rumah" required>
+                      <input type="text" name="alamat_rumah" class="form-control bg-light" id="alamat_rumah" placeholder="Tuliskan Alamat Rumah" required>
                     </div>
                   </div>
                 </div>

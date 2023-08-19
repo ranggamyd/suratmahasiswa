@@ -23,8 +23,8 @@
       <div class="col-md-3">
         <a href="<?= base_url('skl') ?>" class="btn btn-primary btn-block mb-3"><i class="fas fa-arrow-left mr-2"></i>Kembali ke daftar SKL</a>
 
-        <div class="card">
-          <div class="card-header">
+        <div class="card bg-gradient-primary">
+          <div class="card-header bg-gradient-primary">
             <h3 class="card-title">Jenis Surat</h3>
 
             <div class="card-tools">
@@ -83,8 +83,8 @@
       </div>
       <!-- /.col -->
       <div class="col-md-9">
-        <div class="card card-primary card-outline">
-          <div class="card-header">
+        <div class="card bg-gradient-primary">
+          <div class="card-header bg-gradient-primary">
             <h3 class="card-title"><?= $title ?></h3>
           </div>
           <!-- /.card-header -->
@@ -98,9 +98,11 @@
             <!-- /.mailbox-read-info -->
             <div class="mailbox-controls with-border text-center">
               <!-- /.btn-group -->
+							<?php if ($this->session->userdata('level') != 'Mahasiswa') : ?>
               <button type="button" onclick="cetak_skl('<?= base_url('skl') ?>/cetak_pdf/<?= $skl->id_skl ?>')" class="btn btn-default btn-sm" title="Print">
                 <i class="fas fa-print mr-2"></i>Cetak Surat
               </button>
+							<?php endif ?>
               <a href="<?= base_url('skl/download_pdf/') . $skl->id_skl ?>" target="__blank" class="btn btn-default btn-sm" title="Download PDF">
                 <i class="far fa-file-pdf mr-2"></i>Download PDF
               </a>

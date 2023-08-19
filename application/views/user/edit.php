@@ -23,8 +23,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="card">
-            <div class="card-header">
+          <div class="card bg-gradient-primary">
+            <div class="card-header bg-gradient-primary">
               <!-- <a href="<?= base_url('user/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Tambah User</a> -->
               <h3 class="card-title">Edit User</h3>
             </div>
@@ -35,7 +35,7 @@
               <div class="card-body">
                 <div class="form-group">
                   <label for="nama_user">Nama Lengkap</label>
-                  <input type="text" name="nama_user" value="<?= $user->nama_user ?>" class="form-control" id="nama_user" placeholder="Tuliskan Nama User" required>
+                  <input type="text" name="nama_user" value="<?= $user->nama_user ?>" class="form-control bg-light" id="nama_user" placeholder="Tuliskan Nama User" required>
                 </div>
               </div>
               <!-- /.card-body -->

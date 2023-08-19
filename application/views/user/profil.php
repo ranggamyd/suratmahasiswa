@@ -24,8 +24,8 @@
           <!-- /.col -->
           <div class="col-12">
             <!-- About Me Box -->
-            <div class="card card-primary">
-              <div class="card-header">
+            <div class="card bg-gradient-primary">
+              <div class="card-header bg-gradient-primary">
                 <h3 class="card-title">Informasi Pengguna</h3>
               </div>
               <!-- /.card-header -->
@@ -49,68 +49,68 @@
                     </div>
                     <!-- /.card -->
                   </div>
-                  <div class="col-md-9 pl-3 d-flex flex-column justify-content-around">
+                  <div class="col-md-9 pl-3 d-flex flex-column justify-content-around pt-3">
                     <?php if ($user->level == 'Dekan') : ?>
                       <?php $dekan = $this->db->get_where('dekan', ['nidn' => $user->nidn_dekan])->row(); ?>
                       <strong>Nama Dekan</strong>
                       <p class="text-muted"><?= $dekan->nama_dekan ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>NIK/NIDN</strong>
                       <p class="text-muted"><?= $dekan->nidn ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>E-Mail</strong>
                       <p class="text-muted"><?= $dekan->email ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>No. Telepon</strong>
                       <p class="text-muted"><?= $dekan->no_telp ?></p>
-                      <hr>
+                      <hr class="divider">
                       <a href="<?= base_url('dekan/edit/') . $dekan->nidn ?>" class="btn btn-block btn-primary"><i class="fas fa-edit mr-2"></i>Perbarui Informasi Dekan</a>
                     <?php elseif ($user->level == 'Kaprodi') : ?>
                       <?php $kaprodi = $this->db->get_where('kaprodi', ['nidn' => $user->nidn_kaprodi])->row(); ?>
                       <strong>Nama Kaprodi</strong>
                       <p class="text-muted"><?= $kaprodi->nama_kaprodi ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>NIK/NIDN</strong>
                       <p class="text-muted"><?= $kaprodi->nidn ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>Kepala Prodi</strong>
                       <p class="text-muted"><?= $this->db->get_where('prodi', ['id' => $kaprodi->id_prodi])->row('nama_prodi'); ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>E-Mail</strong>
                       <p class="text-muted"><?= $kaprodi->email ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>No. Telepon</strong>
                       <p class="text-muted"><?= $kaprodi->no_telp ?></p>
-                      <hr>
+                      <hr class="divider">
                       <a href="<?= base_url('kaprodi/edit/') . $kaprodi->nidn ?>" class="btn btn-block btn-primary"><i class="fas fa-edit mr-2"></i>Perbarui Informasi Kaprodi</a>
                     <?php elseif ($user->level == 'Mahasiswa') : ?>
                       <?php $mhs = $this->db->get_where('mhs', ['nim' => $user->nim_mhs])->row(); ?>
                       <strong>Nama Mahasiswa</strong>
                       <p class="text-muted"><?= $mhs->nama_mhs ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>NIM</strong>
                       <p class="text-muted"><?= $mhs->nim ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>Prodi</strong>
                       <p class="text-muted"><?= $this->db->get_where('prodi', ['id' => $mhs->id_prodi])->row('nama_prodi'); ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>Tingkat / Semester</strong>
                       <p class="text-muted"><?= $mhs->tingkat . ' / ' . $mhs->semester ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>Tahun Masuk</strong>
                       <p class="text-muted"><?= $mhs->thn_masuk ?></p>
-                      <hr>
+                      <hr class="divider">
                       <a href="<?= base_url('mahasiswa/edit/') . $mhs->nim ?>" class="btn btn-block btn-primary"><i class="fas fa-edit mr-2"></i>Perbarui Informasi Mahasiswa</a>
                     <?php elseif ($user->level == 'Administrator') : ?>
                       <strong>Nama Administrator</strong>
                       <p class="text-muted"><?= $user->nama_user ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>Username</strong>
                       <p class="text-muted"><?= $user->username ?></p>
-                      <hr>
+                      <hr class="divider">
                       <strong>Level</strong>
                       <p class="text-muted"><?= $user->level ?></p>
-                      <hr>
+                      <hr class="divider">
                     <?php endif ?>
                   </div>
                 </div>

@@ -22,15 +22,15 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="card">
-            <div class="card-header">
+          <div class="card bg-gradient-primary">
+            <div class="card-header bg-gradient-primary">
               <a href="<?= base_url('dekan/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Tambah Dekan</a>
               <!-- <h3 class="card-title">Daftar Dekan</h3> -->
             </div>
             <!-- /.card-header -->
-            <div class="card-body">
+            <div class="card-body bg-gradient-info">
               <table id="datatable" class="table table-bordered table-striped">
-                <thead class="text-center">
+                <thead class="text-center bg-gradient-primary">
                   <tr>
                     <th>No</th>
                     <th>Nama Lengkap</th>
@@ -40,7 +40,7 @@
                     <th>Aksi</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="bg-gradient-info">
                   <?php
                   $i = 1;
                   foreach ($dekan as $item) :
@@ -59,7 +59,7 @@
                     </tr>
                   <?php endforeach ?>
                 </tbody>
-                <tfoot class="text-center">
+                <tfoot class="text-center bg-gradient-primary">
                   <tr>
                     <th>No</th>
                     <th>Nama Lengkap</th>

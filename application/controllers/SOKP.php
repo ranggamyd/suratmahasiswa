@@ -43,7 +43,7 @@ class SOKP extends CI_Controller
         'message' => $message,
       ),
       CURLOPT_HTTPHEADER => array(
-        'Authorization: M9X6wZ#LkpSzwX6teMp#'
+        'Authorization: W9z_EA#UeD@w4Ai63Zdu'
       ),
     ));
 

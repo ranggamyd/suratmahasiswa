@@ -18,39 +18,39 @@
 
 <body class="hold-transition dark-mode login-page">
   <div class="login-box">
-    <div class="login-logo">
-      <b>Selamat Datang!</b>
+    <div class="login-logo mb-5">
+      <h1>Selamat Datang!</h1>
     </div>
     <!-- /.login-logo -->
     <div class="card">
       <div class="card-body login-card-body">
-        <p class="login-box-msg">Surat Mahasiswa Fakultas Teknik UMC</p>
+        <h5 class="login-box-msg mb-3">Sistem Informasi Pelayanan Surat Mahasiswa Fakultas Teknik Universitas Muhammadiyah Cirebon</h5>
 
         <form action="<?= base_url('auth/login') ?>" method="post">
-          <label for="username">Username</label>
-          <div class="input-group mb-3">
-            <input type="username" name="username" class="form-control" id="username" placeholder="Tuliskan Username" required>
+          <label for="username" class="text-lg">Username</label>
+          <div class="input-group mb-4">
+            <input type="username" name="username" class="form-control form-control-lg" id="username" placeholder="Tuliskan Username" required>
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-user"></span>
               </div>
             </div>
           </div>
-          <label for="password">Password</label>
-          <div class="input-group mb-3">
-            <input type="password" name="password" class="form-control" id="password" placeholder="Tuliskan Password" required>
+          <label for="password" class="text-lg">Password</label>
+          <div class="input-group mb-4">
+            <input type="password" name="password" class="form-control form-control-lg" id="password" placeholder="Tuliskan Password" required>
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row mb-2">
             <div class="col-8">
             </div>
             <!-- /.col -->
             <div class="col-4">
-              <button type="submit" class="btn btn-primary btn-block">Masuk<i class="fas fa-sign-in-alt ml-2"></i></button>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Masuk<i class="fas fa-sign-in-alt ml-2"></i></button>
             </div>
             <!-- /.col -->
           </div>

@@ -98,9 +98,11 @@
             <!-- /.mailbox-read-info -->
             <div class="mailbox-controls with-border text-center">
               <!-- /.btn-group -->
+							<?php if ($this->session->userdata('level') != 'Mahasiswa') : ?>
               <button type="button" onclick="cetak_sokp('<?= base_url('sokp') ?>/cetak_pdf/<?= $sokp->id_sokp ?>')" class="btn btn-default btn-sm" title="Print">
                 <i class="fas fa-print mr-2"></i>Cetak Surat
               </button>
+							<?php endif ?>
               <a href="<?= base_url('sokp/download_pdf/') . $sokp->id_sokp ?>" target="__blank" class="btn btn-default btn-sm" title="Download PDF">
                 <i class="far fa-file-pdf mr-2"></i>Download PDF
               </a>

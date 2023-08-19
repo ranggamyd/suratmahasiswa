@@ -25,8 +25,8 @@
         <div class="col-md-3">
           <a href="<?= base_url('sak') ?>" class="btn btn-primary btn-block mb-3"><i class="fas fa-arrow-left mr-2"></i>Kembali ke daftar SAK</a>
 
-          <div class="card">
-            <div class="card-header">
+          <div class="card bg-gradient-primary">
+            <div class="card-header bg-gradient-primary">
               <h3 class="card-title">Jenis Surat</h3>
 
               <div class="card-tools">
@@ -85,8 +85,8 @@
         </div>
         <!-- /.col -->
         <div class="col-md-9">
-          <div class="card">
-            <div class="card-header">
+          <div class="card bg-gradient-primary">
+            <div class="card-header bg-gradient-primary">
               <!-- <a href="<?= base_url('sak/edit') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Edit SAK</a> -->
               <h3 class="card-title">Edit Surat Aktif Kuliah</h3>
             </div>
@@ -97,12 +97,12 @@
               <div class="card-body">
                 <div class="form-group">
                   <label for="no_surat">No. Surat</label>
-                  <input type="text" name="no_surat" value="<?= $sak->no_surat ?>" class="form-control" id="no_surat" placeholder="No. Surat :" readonly required>
+                  <input type="text" name="no_surat" value="<?= $sak->no_surat ?>" class="form-control bg-light" id="no_surat" placeholder="No. Surat :" readonly required>
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
                     <label for="nim_mhs">Mahasiswa</label>
-                    <select name="nim_mhs" class="form-control" id="nim_mhs" required>
+                    <select name="nim_mhs" class="form-control bg-light" id="nim_mhs" required>
                       <option value="">== Pilih Mahasiswa ==</option>
                       <?php foreach ($mhs as $item) : ?>
                         <option value="<?= $item['nim'] ?>" data-nama_mhs="<?= $item['nama_mhs'] ?>" data-semester="<?= $item['semester'] ?>" data-nama_prodi="<?= $item['nama_prodi'] ?>" data-gelar="<?= $item['gelar_kelulusan'] ?>" <?= ($item['nim'] == $sak->nim_mhs) ? 'selected' : '' ?>>
@@ -113,7 +113,7 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label for="nidn_dekan">Dekan</label>
-                    <select name="nidn_dekan" class="form-control" id="nidn_dekan" readonly required>
+                    <select name="nidn_dekan" class="form-control bg-light" id="nidn_dekan" readonly required>
                       <option value="">== Pilih Dekan ==</option>
                       <?php foreach ($dekan as $item) : ?>
                         <option value="<?= $item['nidn'] ?>" data-nama_dekan="<?= $item['nama_dekan'] ?>" <?= ($item['nidn'] == $sak->nidn_dekan) ? 'selected' : '' ?>><?= $item['nama_dekan'] ?></option>
@@ -124,16 +124,16 @@
                 <div class="row">
                   <div class="form-group col-md-5">
                     <label for="thn_ajaran">Tahun Ajaran</label>
-                    <input type="text" name="thn_ajaran" value="<?= $sak->thn_ajaran ?>" class="form-control" id="thn_ajaran" placeholder="Tahun Ajaran :" required>
+                    <input type="text" name="thn_ajaran" value="<?= $sak->thn_ajaran ?>" class="form-control bg-light" id="thn_ajaran" placeholder="Tahun Ajaran :" required>
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
                     <label for="tgl_surat">Tanggal Surat</label>
-                    <input type="date" name="tgl_surat" value="<?= $sak->tgl_surat ?>" class="form-control" id="tgl_surat" placeholder="Tanggal Surat :" readonly required>
+                    <input type="date" name="tgl_surat" value="<?= $sak->tgl_surat ?>" class="form-control bg-light" id="tgl_surat" placeholder="Tanggal Surat :" readonly required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="summernote">Body Surat</label>
-                  <textarea name="body_surat" id="summernote" class="form-control" style="height: 300px" required><?= $sak->body_surat ?></textarea>
+                  <textarea name="body_surat" id="summernote" class="form-control bg-light" style="height: 300px" required><?= $sak->body_surat ?></textarea>
                 </div>
               </div>
               <!-- /.card-body -->
