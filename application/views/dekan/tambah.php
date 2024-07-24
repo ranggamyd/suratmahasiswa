@@ -23,15 +23,15 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="card bg-gradient-primary">
-            <div class="card-header bg-gradient-primary">
+          <div class="card">
+            <div class="card-header">
               <!-- <a href="<?= base_url('dekan/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Tambah Dekan</a> -->
               <h3 class="card-title">Tambah Dekan</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
             <form action="<?= base_url('dekan/proses_tambah') ?>" method="post">
-              <div class="card-body bg-gradient-info">
+              <div class="card-body ">
                 <div class="form-group">
                   <label for="nidn">Nomor Induk Dosen Nasional</label>
                   <input type="text" name="nidn" class="form-control  bg-light" id="nidn" placeholder="Tuliskan Nomor Induk Dosen Nasional" required>

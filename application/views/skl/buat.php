@@ -25,8 +25,8 @@
         <div class="col-md-3">
           <a href="<?= base_url('skl') ?>" class="btn btn-primary btn-block mb-3"><i class="fas fa-arrow-left mr-2"></i>Kembali ke daftar SKL</a>
 
-          <div class="card bg-gradient-primary bg-gradient-primary">
-            <div class="card-header bg-gradient-primary bg-gradient-primary">
+          <div class="card">
+            <div class="card-header">
               <h3 class="card-title">Jenis Surat</h3>
 
               <div class="card-tools">
@@ -85,15 +85,15 @@
         </div>
         <!-- /.col -->
         <div class="col-md-9">
-          <div class="card bg-gradient-primary bg-gradient-primary">
-            <div class="card-header bg-gradient-primary bg-gradient-primary">
+          <div class="card">
+            <div class="card-header">
               <!-- <a href="<?= base_url('skl/buat') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Buat Skl</a> -->
               <h3 class="card-title">Buat Surat Keterangan Lulus</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
             <form action="<?= base_url('skl/proses_buat') ?>" method="post">
-              <div class="card-body bg-gradient-primary">
+              <div class="card-body">
                 <div class="form-group">
                   <label for="no_surat">No. Surat</label>
                   <input type="text" name="no_surat" value="<?= $no_surat ?>" class="form-control bg-light" id="no_surat" placeholder="No. Surat :" readonly required>

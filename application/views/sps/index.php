@@ -22,8 +22,8 @@
       <div class="col-md-3">
         <a href="<?= base_url('sps/buat') ?>" class="btn btn-primary btn-block mb-3"><i class="fas fa-pen mr-2"></i>Buat Surat SPS Baru</a>
 
-        <div class="card bg-gradient-primary">
-          <div class="card-header bg-gradient-primary">
+        <div class="card">
+          <div class="card-header">
             <h3 class="card-title">Jenis Surat</h3>
 
             <div class="card-tools">
@@ -82,15 +82,15 @@
       </div>
       <!-- /.col -->
       <div class="col-md-9">
-        <div class="card bg-gradient-primary">
-          <div class="card-header bg-gradient-primary">
+        <div class="card">
+          <div class="card-header">
             <h3 class="card-title"><?= $title ?></h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
             <div class="table-responsive">
               <table id="datatable" class="table table-striped">
-                <thead class="text-center bg-gradient-primary">
+                <thead class="text-center">
                   <tr>
                     <th>No</th>
                     <th>No. Surat</th>
@@ -153,7 +153,7 @@
                     </tr>
                   <?php endforeach ?>
                 </tbody>
-                <tfoot class="text-center bg-gradient-primary">
+                <tfoot class="text-center">
                   <tr>
                     <th>No</th>
                     <th>No. Surat</th>

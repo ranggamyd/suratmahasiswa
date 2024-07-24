@@ -25,8 +25,8 @@
         <div class="col-md-3">
           <a href="<?= base_url('sak') ?>" class="btn btn-primary btn-block mb-3"><i class="fas fa-arrow-left mr-2"></i>Kembali ke daftar SAK</a>
 
-          <div class="card bg-gradient-primary">
-            <div class="card-header bg-gradient-primary">
+          <div class="card">
+            <div class="card-header">
               <h3 class="card-title">Jenis Surat</h3>
 
               <div class="card-tools">
@@ -85,8 +85,8 @@
         </div>
         <!-- /.col -->
         <div class="col-md-9">
-          <div class="card bg-gradient-primary">
-            <div class="card-header bg-gradient-primary">
+          <div class="card">
+            <div class="card-header">
               <!-- <a href="<?= base_url('sak/buat') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Buat SAK</a> -->
               <h3 class="card-title">Buat Surat Aktif Kuliah</h3>
             </div>

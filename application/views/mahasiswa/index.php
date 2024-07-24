@@ -22,17 +22,17 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="card bg-gradient-primary">
-            <div class="card-header bg-gradient-primary">
+          <div class="card">
+            <div class="card-header">
               <?php if ($this->session->userdata('level') == 'Administrator') : ?>
                 <a href="<?= base_url('mahasiswa/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Tambah Mahasiswa</a>
               <?php endif ?>
               <!-- <h3 class="card-title">Daftar Mahasiswa</h3> -->
             </div>
             <!-- /.card-header -->
-            <div class="card-body bg-gradient-info">
+            <div class="card-body ">
               <table id="datatable" class="table table-bordered table-striped">
-                <thead class="text-center bg-gradient-primary">
+                <thead class="text-center">
                   <tr>
                     <th>No</th>
                     <th>Nama Lengkap</th>
@@ -46,7 +46,7 @@
                     <?php endif ?>
                   </tr>
                 </thead>
-                <tbody class=" bg-gradient-info">
+                <tbody class=" ">
                   <?php
                   $i = 1;
                   foreach ($mahasiswa as $item) :
@@ -75,7 +75,7 @@
                     </tr>
                   <?php endforeach ?>
                 </tbody>
-                <tfoot class="text-center bg-gradient-primary">
+                <tfoot class="text-center">
                   <tr>
                     <th>No</th>
                     <th>Nama Lengkap</th>

@@ -24,8 +24,8 @@
           <!-- /.col -->
           <div class="col-12">
             <!-- About Me Box -->
-            <div class="card bg-gradient-primary">
-              <div class="card-header bg-gradient-primary">
+            <div class="card">
+              <div class="card-header">
                 <h3 class="card-title">Informasi Pengguna</h3>
               </div>
               <!-- /.card-header -->

@@ -23,8 +23,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="card bg-gradient-primary">
-            <div class="card-header bg-gradient-primary">
+          <div class="card">
+            <div class="card-header">
               <!-- <a href="<?= base_url('prodi/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Tambah Prodi</a> -->
               <h3 class="card-title">Tambah Prodi</h3>
             </div>

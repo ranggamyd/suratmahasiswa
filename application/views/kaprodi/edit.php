@@ -23,8 +23,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="card bg-gradient-primary">
-            <div class="card-header bg-gradient-primary">
+          <div class="card">
+            <div class="card-header">
               <!-- <a href="<?= base_url('kaprodi/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus-circle mr-2"></i>Tambah Kaprodi</a> -->
               <h3 class="card-title">Edit Kaprodi</h3>
             </div>

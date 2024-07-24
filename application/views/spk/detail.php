@@ -23,8 +23,8 @@
       <div class="col-md-3">
         <a href="<?= base_url('spk') ?>" class="btn btn-primary btn-block mb-3"><i class="fas fa-arrow-left mr-2"></i>Kembali ke daftar SPK</a>
 
-        <div class="card bg-gradient-primary">
-          <div class="card-header bg-gradient-primary">
+        <div class="card">
+          <div class="card-header">
             <h3 class="card-title">Jenis Surat</h3>
 
             <div class="card-tools">
@@ -83,8 +83,8 @@
       </div>
       <!-- /.col -->
       <div class="col-md-9">
-        <div class="card bg-gradient-primary">
-          <div class="card-header bg-gradient-primary">
+        <div class="card">
+          <div class="card-header">
             <h3 class="card-title"><?= $title ?></h3>
           </div>
           <!-- /.card-header -->
